@@ -1,0 +1,148 @@
+==== run 2026-07-11 05:40:14 UTC | takes=2 | format in use: pcm_44100 ====
+airhorn_triple:
+    take 1 [pcm_44100]: 3.52s  rms -7.9  peak 0.0  tail -51.5  -> score -11.1
+    take 2 [pcm_44100]: 3.52s  rms -9.0  peak 0.0  tail -56.6  -> score -12.1
+    PICK: take 1 (score -11.1)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 3.55s, 84 KB  [OK]
+
+vine_boom:
+    take 1 [pcm_44100]: 2.00s  rms -3.9  peak 0.0  tail -36.3  -> score -6.9
+    take 2 [pcm_44100]: 2.00s  rms -4.2  peak 0.0  tail -50.7  -> score -5.2
+    PICK: take 2 (score -5.2)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 2.04s, 48 KB  [OK]
+
+metal_pipe:
+    take 1 [pcm_44100]: 4.00s  rms -17.1  peak 0.0  tail -75.7  -> score -21.1
+    take 2 [pcm_44100]: 4.00s  rms -15.3  peak 0.0  tail -82.2  -> score -19.3
+    PICK: take 2 (score -19.3)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 3.47s, 82 KB  [OK]
+
+fart_reverb:
+    take 1 [pcm_44100]: 4.96s  rms -21.5  peak -2.0  tail -76.0  -> score -26.8
+    take 2 [pcm_44100]: 4.96s  rms -18.8  peak 0.0  tail -61.5  -> score -24.1
+    PICK: take 2 (score -24.1)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 4.99s, 118 KB  [OK]
+
+wrong_buzzer:
+    take 1 [pcm_44100]: 2.40s  rms -11.8  peak 0.0  tail -65.4  -> score -13.4
+    take 2 [pcm_44100]: 2.40s  rms -19.4  peak 0.0  tail -65.4  -> score -21.0
+    PICK: take 1 (score -13.4)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 2.43s, 58 KB  [OK]
+
+seductive_sax:
+    take 1 [pcm_44100]: 4.96s  rms -10.8  peak 0.0  tail -22.0  -> score -18.1
+    take 2 [pcm_44100]: 4.96s  rms -20.7  peak 0.0  tail -41.7  -> score -28.1
+    PICK: take 1 (score -18.1)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 4.99s, 118 KB  [OK]
+
+angry_goose:
+    take 1 [pcm_44100]: 3.52s  rms -11.4  peak 0.0  tail -81.8  -> score -14.5
+    take 2 [pcm_44100]: 3.52s  rms -9.2  peak 0.0  tail -78.3  -> score -12.4
+    PICK: take 2 (score -12.4)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 2.40s, 57 KB  [OK]
+
+red_alert:
+    take 1 [pcm_44100]: 4.00s  rms -14.4  peak 0.0  tail -73.0  -> score -18.4
+    take 2 [pcm_44100]: 4.00s  rms -7.9  peak 0.0  tail -35.4  -> score -13.9
+    PICK: take 2 (score -13.9)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 4.05s, 96 KB  [OK]
+
+glass_cat:
+    take 1 [pcm_44100]: 4.40s  rms -15.7  peak 0.0  tail -54.0  -> score -20.3
+    take 2 [pcm_44100]: 4.40s  rms -15.4  peak 0.0  tail -52.9  -> score -20.0
+    PICK: take 2 (score -20.0)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 4.44s, 105 KB  [OK]
+
+bruh:
+    take 1 [pcm_44100]: 0.70s  rms -17.9  peak -1.5  tail -65.6  -> score -15.9
+    take 2 [pcm_44100]: 0.70s  rms -19.8  peak -1.4  tail -51.1  -> score -17.8
+    PICK: take 1 (score -15.9)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -16.44 LUFS)
+    FINAL: 0.57s, 14 KB  [OK]
+
+braam_trailer:
+    take 1 [pcm_44100]: 6.00s  rms -4.6  peak 0.0  tail -61.5  -> score -11.6
+    take 2 [pcm_44100]: 6.00s  rms -3.3  peak 0.0  tail -51.6  -> score -10.3
+    PICK: take 2 (score -10.3)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    squeeze: atempo x1.200 (6.00s -> fits)
+    FINAL: 5.04s, 119 KB  [OK]
+
+heavenly_choir:
+    take 1 [pcm_44100]: 8.00s  rms -12.3  peak 0.0  tail -78.7  -> score -22.3
+    take 2 [pcm_44100]: 8.00s  rms -12.9  peak 0.0  tail -72.7  -> score -22.9
+    PICK: take 1 (score -22.3)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    squeeze: atempo x1.559 (7.79s -> fits)
+    FINAL: 5.04s, 119 KB  [OK]
+
+epic_riser:
+    take 1 [pcm_44100]: 8.96s  rms -14.3  peak 0.0  tail -81.5  -> score -25.7
+    take 2 [pcm_44100]: 8.96s  rms -12.8  peak 0.0  tail -76.8  -> score -24.2
+    PICK: take 2 (score -24.2)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    squeeze: atempo x1.792 (8.96s -> fits)
+    FINAL: 5.04s, 119 KB  [OK]
+
+victory_fanfare:
+    take 1 [pcm_44100]: 6.96s  rms -16.0  peak 0.0  tail -70.6  -> score -24.4
+    take 2 [pcm_44100]: 6.96s  rms -15.7  peak 0.0  tail -58.8  -> score -24.1
+    PICK: take 2 (score -24.1)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    squeeze: atempo x1.392 (6.96s -> fits)
+    FINAL: 5.04s, 119 KB  [OK]
+
+phonk_drop:
+    take 1 [pcm_44100]: 10.00s  rms -11.4  peak 0.0  tail -65.2  -> score -24.4
+    take 2 [pcm_44100]: 10.00s  rms -9.7  peak -0.1  tail -65.4  -> score -22.7
+    PICK: take 2 (score -22.7)
+    master: peak lift -0.9 dB (peak was -0.1 dB, cap +12)
+    squeeze: atempo x2.000 (10.00s -> fits)
+    FINAL: 5.04s, 119 KB  [OK]
+
+boss_battle:
+    take 1 [pcm_44100]: 10.00s  rms -14.8  peak 0.0  tail -68.4  -> score -27.8
+    take 2 [pcm_44100]: 10.00s  rms -17.4  peak 0.0  tail -80.8  -> score -30.4
+    PICK: take 1 (score -27.8)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    squeeze: atempo x2.000 (10.00s -> fits)
+    FINAL: 5.04s, 119 KB  [OK]
+
+sad_violin:
+    take 1 [pcm_44100]: 8.00s  rms -12.7  peak 0.0  tail -7.4  -> score -24.7
+    take 2 [pcm_44100]: 8.00s  rms -12.7  peak 0.0  tail -53.5  -> score -22.7
+    PICK: take 2 (score -22.7)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    squeeze: atempo x1.600 (8.00s -> fits)
+    FINAL: 5.04s, 119 KB  [OK]
+
+jake_trailer:
+    take 1 [pcm_44100]: 4.88s  rms -18.0  peak -1.1  tail -61.5  -> score -16.0
+    take 2 [pcm_44100]: 5.25s  rms -18.7  peak -0.8  tail -86.0  -> score -16.7
+    PICK: take 1 (score -16.0)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -15.95 LUFS)
+    FINAL: 4.73s, 111 KB  [OK]
+
+reece_mum:
+    take 1 [pcm_44100]: 3.39s  rms -20.9  peak -2.5  tail -79.2  -> score -18.9
+    take 2 [pcm_44100]: 3.48s  rms -20.2  peak -1.5  tail -87.3  -> score -18.2
+    PICK: take 2 (score -18.2)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -20.05 LUFS)
+    FINAL: 3.19s, 75 KB  [OK]
+
+jungle_diff:
+    take 1 [pcm_44100]: 2.51s  rms -21.9  peak -3.3  tail -87.7  -> score -19.9
+    take 2 [pcm_44100]: 2.32s  rms -20.8  peak -0.9  tail -87.2  -> score -18.8
+    PICK: take 2 (score -18.8)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -19.95 LUFS)
+    FINAL: 2.19s, 52 KB  [OK]
+
