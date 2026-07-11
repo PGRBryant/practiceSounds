@@ -82,12 +82,16 @@ FINAL_BITRATE = "192k"                    # 5.2 s @ 192 kbps ~= 125 KB — plent
 
 HAVE_FFMPEG = bool(shutil.which("ffmpeg") and shutil.which("ffprobe"))
 
-# Lossless first; fall back only if the plan gates a format. The chain index
-# is remembered globally so we don't re-fail on every request.
-FORMAT_CHAIN = (
-    ["pcm_44100", "mp3_44100_192", "mp3_44100_128"] if HAVE_FFMPEG else ["mp3_44100_128"]
-)
-_format_idx = 0
+# Lossless-first for TTS; fall back only if the plan gates a format.
+# The sound-generation endpoint is different: its PCM comes back STEREO
+# (measured — every SFX decoded as mono ran exactly 2x the requested length,
+# slowed and pitched an octave down). MP3 frames self-describe channel count
+# and sample rate, so SFX requests use MP3 and dodge the guesswork entirely.
+CHAINS = {
+    "tts": ["pcm_44100", "mp3_44100_192", "mp3_44100_128"] if HAVE_FFMPEG else ["mp3_44100_128"],
+    "sfx": ["mp3_44100_192", "mp3_44100_128"],
+}
+_fmt_idx = {"tts": 0, "sfx": 0}
 
 # Premade ElevenLabs voices. If any ID errors on your account,
 # run --list-voices and swap in one you like.
@@ -196,12 +200,12 @@ def measure(path: Path) -> dict:
 # ---------------------------------------------------------------------------
 # API CALLS (lossless-first with plan-gate fallback)
 # ---------------------------------------------------------------------------
-def eleven_post(url: str, payload: dict) -> tuple:
+def eleven_post(url: str, payload: dict, kind: str) -> tuple:
     """POST to ElevenLabs. Returns (audio_bytes, format_used).
-    Falls down FORMAT_CHAIN if a format is gated; retries once on 429."""
-    global _format_idx
+    Falls down the kind's format chain if a format is gated; retries once on 429."""
+    chain = CHAINS[kind]
     while True:
-        fmt = FORMAT_CHAIN[_format_idx]
+        fmt = chain[_fmt_idx[kind]]
         fell_back = False
         for attempt in (1, 2):
             r = requests.post(
@@ -221,9 +225,9 @@ def eleven_post(url: str, payload: dict) -> tuple:
             gated = r.status_code in (400, 401, 403) and (
                 "output_format" in body or "subscription" in body or "upgrade" in body.lower()
             )
-            if gated and _format_idx < len(FORMAT_CHAIN) - 1:
-                _format_idx += 1
-                print(f"      {fmt} gated by plan -> falling back to {FORMAT_CHAIN[_format_idx]}")
+            if gated and _fmt_idx[kind] < len(chain) - 1:
+                _fmt_idx[kind] += 1
+                print(f"      {fmt} gated by plan -> falling back to {chain[_fmt_idx[kind]]}")
                 fell_back = True
                 break
             raise RuntimeError(f"HTTP {r.status_code}: {body}")
@@ -233,13 +237,15 @@ def eleven_post(url: str, payload: dict) -> tuple:
 
 def gen_sfx(prompt: str, seconds: float) -> tuple:
     return eleven_post(f"{BASE_URL}/sound-generation",
-                       {"text": prompt, "duration_seconds": seconds, "prompt_influence": 0.4})
+                       {"text": prompt, "duration_seconds": seconds, "prompt_influence": 0.4},
+                       kind="sfx")
 
 
 def gen_tts(text: str, voice_id: str, settings: dict) -> tuple:
     return eleven_post(f"{BASE_URL}/text-to-speech/{voice_id}",
                        {"text": text, "model_id": "eleven_multilingual_v2",
-                        "voice_settings": settings})
+                        "voice_settings": settings},
+                       kind="tts")
 
 
 def list_voices() -> None:
@@ -465,8 +471,9 @@ def main() -> None:
     if report:
         stamp = time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime())
         with REPORT.open("a") as f:
-            f.write(f"==== run {stamp} | takes={takes_n} | format in use: "
-                    f"{FORMAT_CHAIN[_format_idx]} ====\n" + "\n".join(report) + "\n")
+            f.write(f"==== run {stamp} | takes={takes_n} | formats: "
+                    f"tts={CHAINS['tts'][_fmt_idx['tts']]}, sfx={CHAINS['sfx'][_fmt_idx['sfx']]} "
+                    f"====\n" + "\n".join(report) + "\n")
         print(f"\nLab notes -> {REPORT}")
     print(f"Upload from ./{OUT_DIR}/ via Server Settings -> Soundboard -> Upload Sound")
 
