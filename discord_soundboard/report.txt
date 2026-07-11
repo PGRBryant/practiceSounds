@@ -146,3 +146,116 @@ jungle_diff:
     master: loudnorm 2-pass linear -> -14.0 LUFS (was -19.95 LUFS)
     FINAL: 2.19s, 52 KB  [OK]
 
+==== run 2026-07-11 05:47:35 UTC | takes=2 | formats: tts=pcm_44100, sfx=mp3_44100_192 ====
+airhorn_triple:
+    take 1 [mp3_44100_192]: 1.78s  rms -9.0  peak 0.0  tail -54.0  -> score -7.1
+    take 2 [mp3_44100_192]: 1.78s  rms -9.3  peak 0.0  tail -58.4  -> score -7.4
+    PICK: take 1 (score -7.1)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 1.83s, 44 KB  [OK]
+
+vine_boom:
+    take 1 [mp3_44100_192]: 1.02s  rms -8.8  peak -0.3  tail -48.7  -> score -8.9
+    take 2 [mp3_44100_192]: 1.02s  rms -7.9  peak -0.3  tail -55.4  -> score -5.9
+    PICK: take 2 (score -5.9)
+    master: peak lift -0.7 dB (peak was -0.3 dB, cap +12)
+    FINAL: 1.07s, 26 KB  [OK]
+
+metal_pipe:
+    take 1 [mp3_44100_192]: 2.01s  rms -16.0  peak 0.0  tail -63.3  -> score -14.0
+    take 2 [mp3_44100_192]: 2.01s  rms -18.1  peak 0.0  tail -60.2  -> score -16.1
+    PICK: take 1 (score -14.0)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 2.06s, 49 KB  [OK]
+
+fart_reverb:
+    take 1 [mp3_44100_192]: 2.48s  rms -21.2  peak -0.1  tail -67.4  -> score -19.2
+    take 2 [mp3_44100_192]: 2.48s  rms -17.4  peak 0.0  tail -73.9  -> score -15.4
+    PICK: take 2 (score -15.4)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 2.46s, 58 KB  [OK]
+
+wrong_buzzer:
+    take 1 [mp3_44100_192]: 1.20s  rms -18.4  peak -0.7  tail -66.4  -> score -16.4
+    take 2 [mp3_44100_192]: 1.20s  rms -22.0  peak -0.0  tail -62.9  -> score -20.0
+    PICK: take 1 (score -16.4)
+    master: peak lift -0.3 dB (peak was -0.7 dB, cap +12)
+    FINAL: 1.25s, 30 KB  [OK]
+
+seductive_sax:
+    take 1 [mp3_44100_192]: 2.48s  rms -18.4  peak -1.4  tail -37.8  -> score -18.4
+    take 2 [mp3_44100_192]: 2.48s  rms -17.4  peak -0.1  tail -59.0  -> score -15.4
+    PICK: take 2 (score -15.4)
+    master: peak lift -0.9 dB (peak was -0.1 dB, cap +12)
+    FINAL: 2.53s, 60 KB  [OK]
+
+angry_goose:
+    take 1 [mp3_44100_192]: 1.78s  rms -10.3  peak 0.0  tail -79.9  -> score -8.4
+    take 2 [mp3_44100_192]: 1.78s  rms -11.2  peak -0.0  tail -85.6  -> score -9.3
+    PICK: take 1 (score -8.4)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 1.28s, 31 KB  [OK]
+
+red_alert:
+    take 1 [mp3_44100_192]: 2.01s  rms -9.1  peak 0.0  tail -66.2  -> score -7.1
+    take 2 [mp3_44100_192]: 2.01s  rms -11.6  peak 0.0  tail -62.8  -> score -9.6
+    PICK: take 1 (score -7.1)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 2.06s, 49 KB  [OK]
+
+glass_cat:
+    take 1 [mp3_44100_192]: 2.22s  rms -16.7  peak 0.0  tail -56.8  -> score -14.8
+    take 2 [mp3_44100_192]: 2.22s  rms -15.2  peak 0.0  tail -54.5  -> score -13.3
+    PICK: take 2 (score -13.3)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 2.27s, 54 KB  [OK]
+
+braam_trailer:
+    take 1 [mp3_44100_192]: 3.01s  rms -3.4  peak -0.2  tail -29.4  -> score -3.4
+    take 2 [mp3_44100_192]: 3.01s  rms -4.7  peak -0.2  tail -42.1  -> score -4.7
+    PICK: take 1 (score -3.4)
+    master: peak lift -0.8 dB (peak was -0.2 dB, cap +12)
+    FINAL: 3.06s, 72 KB  [OK]
+
+heavenly_choir:
+    take 1 [mp3_44100_192]: 4.02s  rms -13.3  peak -0.1  tail -75.1  -> score -11.4
+    take 2 [mp3_44100_192]: 4.02s  rms -13.2  peak 0.0  tail -77.5  -> score -11.3
+    PICK: take 2 (score -11.3)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 4.08s, 96 KB  [OK]
+
+epic_riser:
+    take 1 [mp3_44100_192]: 4.49s  rms -11.8  peak 0.0  tail -73.5  -> score -9.8
+    take 2 [mp3_44100_192]: 4.49s  rms -13.8  peak -0.0  tail -62.2  -> score -11.8
+    PICK: take 1 (score -9.8)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 4.47s, 105 KB  [OK]
+
+victory_fanfare:
+    take 1 [mp3_44100_192]: 3.50s  rms -14.8  peak 0.0  tail -74.2  -> score -12.8
+    take 2 [mp3_44100_192]: 3.50s  rms -16.2  peak 0.0  tail -71.8  -> score -14.2
+    PICK: take 1 (score -12.8)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 3.55s, 84 KB  [OK]
+
+phonk_drop:
+    take 1 [mp3_44100_192]: 5.02s  rms -7.9  peak -0.1  tail -29.5  -> score -8.0
+    take 2 [mp3_44100_192]: 5.02s  rms -8.5  peak -1.7  tail -62.5  -> score -6.6
+    PICK: take 2 (score -6.6)
+    master: peak lift +0.7 dB (peak was -1.7 dB, cap +12)
+    FINAL: 5.07s, 119 KB  [OK]
+
+boss_battle:
+    take 1 [mp3_44100_192]: 5.02s  rms -15.7  peak -0.1  tail -72.9  -> score -13.7
+    take 2 [mp3_44100_192]: 5.02s  rms -17.0  peak -0.2  tail -81.6  -> score -15.0
+    PICK: take 1 (score -13.7)
+    master: peak lift -0.9 dB (peak was -0.1 dB, cap +12)
+    FINAL: 5.07s, 119 KB  [OK]
+
+sad_violin:
+    take 1 [mp3_44100_192]: 4.02s  rms -12.1  peak -0.1  tail -40.8  -> score -12.1
+    take 2 [mp3_44100_192]: 4.02s  rms -10.7  peak 0.0  tail -51.7  -> score -8.8
+    PICK: take 2 (score -8.8)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 4.08s, 96 KB  [OK]
+
