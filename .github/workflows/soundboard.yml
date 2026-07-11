@@ -1,0 +1,91 @@
+# Save this in your repo at:  .github/workflows/soundboard.yml
+#
+# Runs automatically when soundboard_generator.py is added/changed, and can
+# be run manually from the Actions tab ("Run workflow", with a takes input).
+#
+# Requires one repo secret (name must match EXACTLY — a guessed secret name
+# means an empty key and a bare 401):
+#   Settings -> Secrets and variables -> Actions -> New repository secret
+#   Name:  ELEVENLABS_API_KEY     Value: your sk_... key
+#
+# Results:
+#   * committed into the repo under discord_soundboard/  (MP3s + report.txt)
+#   * also attached to the run as a downloadable zip ("Artifacts" section)
+#
+# Ops notes:
+#   * Private repos meter Actions minutes. A run stuck in "queued" forever
+#     with no error is almost always billing, not capacity — and a run queued
+#     under an exhausted meter can stay frozen even after upgrading: cancel
+#     it and dispatch a fresh one.
+#   * One pending run per concurrency group: rapid-fire dispatches silently
+#     replace each other. Dispatch sequentially — wait, then fire the next.
+
+name: Generate Discord Soundboard
+
+on:
+  workflow_dispatch:
+    inputs:
+      takes:
+        description: "Takes per sound (2 = pick the better roll, 1 = thrift)"
+        default: "2"
+        required: false
+  push:
+    paths:
+      - soundboard_generator.py
+      - .github/workflows/soundboard.yml
+
+concurrency:
+  group: soundboard
+  cancel-in-progress: false   # never cancel a run that's mid-spend on credits
+
+permissions:
+  contents: write             # lets the job commit the MP3s back
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Ensure dependencies (ffmpeg ships on the runner; guard anyway)
+        run: |
+          pip install requests
+          ffmpeg -version >/dev/null 2>&1 || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+
+      - name: Generate the sounds
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python soundboard_generator.py --takes ${{ github.event.inputs.takes || '2' }}
+
+      - name: Upload zip artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: discord_soundboard
+          path: discord_soundboard/
+          if-no-files-found: error
+
+      # Never `git push || true` — swallowed pushes silently eat finished
+      # renders. Retry with rebase, then FAIL LOUDLY if it still won't land.
+      - name: Commit results back to the repo
+        run: |
+          git config user.name "soundboard-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add discord_soundboard/
+          git commit -m "Generate soundboard clips" || { echo "Nothing new to commit"; exit 0; }
+          n=0
+          until git push; do
+            n=$((n+1))
+            if [ "$n" -ge 3 ]; then
+              echo "::error::git push failed after 3 attempts"
+              exit 1
+            fi
+            git rebase --abort 2>/dev/null || true
+            git pull --rebase -X theirs
+          done
