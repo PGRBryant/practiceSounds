@@ -2,8 +2,8 @@
 """
 Discord Soundboard Generator — lab edition
 ==========================================
-Generates 20 meme-grade soundboard clips with the ElevenLabs API:
-16 AI sound effects + 4 voice lines (Jake, Reece, and two more for the boys).
+Generates 29 meme-grade soundboard clips with the ElevenLabs API:
+16 AI sound effects + 13 voice lines (Jake, Reece, and the whole lobby).
 
 Every final clip fits Discord's soundboard hard caps:
   * max 5.2 seconds   (verified with ffprobe; auto-squeezed if a hair over)
@@ -158,6 +158,26 @@ SOUNDS = [
          text="REECE! Get down here RIGHT NOW! I will NOT ask you again!"),
     dict(name="jungle_diff", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
          text="Ladies and gentlemen... JUNGLE DIFF!"),
+
+    # ---------- HIGH ENERGY (round 2) ----------
+    dict(name="doubled_damage", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="I just DOUBLED your damage. AGAIN!"),
+    dict(name="reece_tank", kind="tts", voice="adam", settings=ANGRY, trim="tight",
+         text="REECE! I'M A TANK! I'M A TAAAANK!"),
+    dict(name="jake_why_bad", kind="tts", voice="lily", settings=DRAMATIC, trim="tight",
+         text="Jaaaake... why so baaaaad?"),
+    dict(name="missed_everything", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="Ladies and gentlemen... he missed... EVERYTHING!"),
+    dict(name="minus_aura", kind="tts", voice="adam", settings=DEADPAN, trim="tight",
+         text="Minus one thousand aura."),
+    dict(name="who_pinged", kind="tts", voice="adam", settings=ANGRY, trim="tight",
+         text="WHO pinged me?! WHO! PINGED! ME!"),
+    dict(name="no_flash_no_hope", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="No flash! No ult! NO HOPE!"),
+    dict(name="character_dev", kind="tts", voice="adam", settings=DEADPAN, trim="tight",
+         text="It's not a loss. It's character development."),
+    dict(name="in_this_economy", kind="tts", voice="lily", settings=ANGRY, trim="tight",
+         text="Zero and seven?! In THIS economy?!"),
 ]
 
 # ---------------------------------------------------------------------------
