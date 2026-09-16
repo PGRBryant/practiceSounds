@@ -324,3 +324,116 @@ in_this_economy:
     master: loudnorm 2-pass linear -> -14.0 LUFS (was -21.31 LUFS)
     FINAL: 2.27s, 54 KB  [OK]
 
+==== run 2026-09-16 03:39:09 UTC | takes=2 | formats: tts=pcm_44100, sfx=mp3_44100_192 ====
+question_mark_ping:
+    take 1 [pcm_44100]: 3.34s  rms -21.1  peak -3.3  tail -87.3  -> score -19.1
+    take 2 [pcm_44100]: 4.04s  rms -22.8  peak -3.8  tail -87.2  -> score -20.8
+    PICK: take 1 (score -19.1)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -20.37 LUFS)
+    FINAL: 3.06s, 72 KB  [OK]
+
+surrender_at_15:
+    take 1 [pcm_44100]: 3.53s  rms -20.7  peak -3.9  tail -82.7  -> score -18.7
+    take 2 [pcm_44100]: 3.76s  rms -21.3  peak -1.6  tail -86.8  -> score -19.3
+    PICK: take 1 (score -18.7)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -21.05 LUFS)
+    FINAL: 3.37s, 80 KB  [OK]
+
+report_support:
+    take 1 [pcm_44100]: 4.18s  rms -13.5  peak -0.3  tail -82.8  -> score -11.5
+    take 2 [pcm_44100]: 4.27s  rms -15.0  peak -0.9  tail -83.5  -> score -13.0
+    PICK: take 1 (score -11.5)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -13.48 LUFS)
+    FINAL: 4.05s, 96 KB  [OK]
+
+skill_issue:
+    take 1 [pcm_44100]: 1.02s  rms -18.8  peak -2.8  tail -83.3  -> score -16.8
+    take 2 [pcm_44100]: 1.02s  rms -18.4  peak -1.8  tail -86.0  -> score -16.4
+    PICK: take 2 (score -16.4)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -16.30 LUFS)
+    FINAL: 0.91s, 22 KB  [OK]
+
+one_v_nine:
+    take 1 [pcm_44100]: 2.93s  rms -24.2  peak -3.1  tail -85.2  -> score -22.2
+    take 2 [pcm_44100]: 2.93s  rms -22.7  peak -3.0  tail -42.4  -> score -22.7
+    PICK: take 1 (score -22.2)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -22.88 LUFS)
+    FINAL: 2.69s, 64 KB  [OK]
+
+rage_quit_keyboard:
+    take 1 [mp3_44100_192]: 4.02s  rms -21.0  peak -0.0  tail -60.0  -> score -19.1
+    take 2 [mp3_44100_192]: 4.02s  rms -27.2  peak -1.8  tail -59.2  -> score -25.2
+    PICK: take 1 (score -19.1)
+    master: peak lift -1.0 dB (peak was -0.0 dB, cap +12)
+    FINAL: 4.08s, 96 KB  [OK]
+
+legendary_drop:
+    take 1 [mp3_44100_192]: 3.01s  rms -22.8  peak -4.1  tail -71.1  -> score -20.8
+    take 2 [mp3_44100_192]: 3.01s  rms -20.7  peak -1.8  tail -68.1  -> score -18.7
+    PICK: take 2 (score -18.7)
+    master: peak lift +0.8 dB (peak was -1.8 dB, cap +12)
+    FINAL: 3.06s, 72 KB  [OK]
+
+game_over_8bit:
+    take 1 [mp3_44100_192]: 3.50s  rms -11.7  peak -0.2  tail -63.0  -> score -9.7
+    take 2 [mp3_44100_192]: 3.50s  rms -11.3  peak 0.0  tail -69.4  -> score -9.3
+    PICK: take 2 (score -9.3)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 3.55s, 84 KB  [OK]
+
+record_scratch:
+    take 1 [mp3_44100_192]: 1.49s  rms -13.4  peak 0.0  tail -52.9  -> score -11.4
+    take 2 [mp3_44100_192]: 1.49s  rms -13.5  peak 0.0  tail -53.0  -> score -11.6
+    PICK: take 1 (score -11.4)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 1.54s, 37 KB  [OK]
+
+crickets:
+    take 1 [mp3_44100_192]: 4.49s  rms -52.6  peak -36.7  tail -52.0  -> score -50.6
+    take 2 [mp3_44100_192]: 4.49s  rms -29.0  peak -1.3  tail -77.6  -> score -27.1
+    PICK: take 2 (score -27.1)
+    master: peak -1.3 dB, no lift needed
+    FINAL: 1.20s, 29 KB  [OK]
+
+slide_whistle_fail:
+    take 1 [mp3_44100_192]: 3.01s  rms -13.0  peak -0.2  tail -50.1  -> score -11.0
+    take 2 [mp3_44100_192]: 3.01s  rms -9.0  peak -0.2  tail -67.2  -> score -7.1
+    PICK: take 2 (score -7.1)
+    master: peak lift -0.8 dB (peak was -0.2 dB, cap +12)
+    FINAL: 2.95s, 70 KB  [OK]
+
+bonk:
+    take 1 [mp3_44100_192]: 1.02s  rms -22.7  peak -0.1  tail -61.8  -> score -20.7
+    take 2 [mp3_44100_192]: 1.02s  rms -44.0  peak -23.6  tail -77.3  -> score -42.1
+    PICK: take 1 (score -20.7)
+    master: peak lift -0.8 dB (peak was -0.2 dB, cap +12)
+    FINAL: 1.07s, 26 KB  [OK]
+
+clown_honk:
+    take 1 [mp3_44100_192]: 3.50s  rms -13.0  peak 0.0  tail -64.1  -> score -11.0
+    take 2 [mp3_44100_192]: 3.50s  rms -13.9  peak 0.0  tail -64.2  -> score -12.0
+    PICK: take 1 (score -11.0)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 3.55s, 84 KB  [OK]
+
+machine_gun_fart:
+    take 1 [mp3_44100_192]: 3.01s  rms -17.4  peak 0.0  tail -77.4  -> score -15.4
+    take 2 [mp3_44100_192]: 3.01s  rms -14.6  peak 0.0  tail -71.4  -> score -12.6
+    PICK: take 2 (score -12.6)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 2.69s, 64 KB  [OK]
+
+dial_up_modem:
+    take 1 [mp3_44100_192]: 5.02s  rms -22.3  peak -7.7  tail -65.6  -> score -20.4
+    take 2 [mp3_44100_192]: 5.02s  rms -20.6  peak -7.6  tail -71.3  -> score -18.6
+    PICK: take 2 (score -18.6)
+    master: peak lift +6.6 dB (peak was -7.6 dB, cap +12)
+    FINAL: 4.44s, 105 KB  [OK]
+
+sad_airhorn:
+    take 1 [mp3_44100_192]: 3.01s  rms -9.2  peak 0.0  tail -57.7  -> score -7.2
+    take 2 [mp3_44100_192]: 3.01s  rms -9.5  peak 0.0  tail -58.0  -> score -7.5
+    PICK: take 1 (score -7.2)
+    master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
+    FINAL: 3.06s, 72 KB  [OK]
+
