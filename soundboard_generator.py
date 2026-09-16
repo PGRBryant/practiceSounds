@@ -2,8 +2,8 @@
 """
 Discord Soundboard Generator — lab edition
 ==========================================
-Generates 187 meme-grade soundboard clips with the ElevenLabs API:
-29 AI sound effects + 158 voice lines (Jake, Reece, and the whole lobby).
+Generates 203 meme-grade soundboard clips with the ElevenLabs API:
+29 AI sound effects + 174 voice lines (Jake, Reece, and the whole lobby).
 
 Every final clip fits Discord's soundboard hard caps:
   * max 5.2 seconds   (verified with ffprobe; auto-squeezed if a hair over)
@@ -541,6 +541,40 @@ SOUNDS = [
          text="Jake: two kills. Reece: two kills. Tied. Kiss to break the tie."),
     dict(name="behind_the_shop", kind="tts", voice="liam", settings=CASUAL, trim="tight",
          text="Reece wants to one v one Jake. Behind the shop. ...It's not a fight, is it, Reece."),
+
+    # ---------- ROUND 12: STATS (damage charts as a personality) ----------
+    dict(name="damage_charts", kind="tts", voice="laura", settings=DRAMATIC, trim="tight",
+         text="Damage charts."),
+    dict(name="damage_doesnt_matter", kind="tts", voice="jessica", settings=DRAMATIC, trim="tight",
+         text="Damage doesn't matter!"),
+    dict(name="kda_doesnt_matter", kind="tts", voice="harry", settings=ANGRY, trim="tight",
+         text="KDA DOESN'T MATTER!!"),
+    dict(name="look_at_the_charts", kind="tts", voice="sarah", settings=DRAMATIC, trim="tight",
+         text="Look at the CHARTS, sweetie. Look at them. Scroll down. Keep scrolling."),
+    dict(name="most_damage_eighth", kind="tts", voice="river", settings=DEADPAN, trim="tight",
+         text="Most damage. Eighth place. The numbers were beautiful. The result was not."),
+    dict(name="kda_player", kind="tts", voice="laura", settings=CASUAL, trim="tight",
+         text="Oh, he's a KDA player. Precious. Protecting that ratio like it's a skincare routine."),
+    dict(name="numbers_dont_lie", kind="tts", voice="eric", settings=CASUAL, trim="tight",
+         text="The numbers don't lie, honey. You do. But the numbers don't."),
+    dict(name="stat_check", kind="tts", voice="alice", settings=DEADPAN, trim="tight",
+         text="Stat check. Damage: fine. Kills: no. Deaths: many. Vibes: immaculate."),
+    dict(name="serving_damage", kind="tts", voice="jessica", settings=DRAMATIC, trim="tight",
+         text="Serving DAMAGE. Serving NUMBERS. Serving... zero kills. But serving."),
+    dict(name="you_are_a_sponge", kind="tts", voice="daniel", settings=DEADPAN, trim="tight",
+         text="Top of the damage taken chart. Congratulations. You are a sponge."),
+    dict(name="stat_padding", kind="tts", voice="oliver", settings=DRAMATIC, trim="tight",
+         text="Stat padding. In ARENA. Farming numbers while we BURN."),
+    dict(name="screenshot_the_stats", kind="tts", voice="liam", settings=CASUAL, trim="tight",
+         text="Screenshot the stats. Screenshot it. That's going in the group chat. Forever."),
+    dict(name="kda_is_a_construct", kind="tts", voice="brian", settings=DRAMATIC, trim="tight",
+         text="KDA... is a construct. Deaths... are a mindset. Eighth place... is a lifestyle."),
+    dict(name="put_some_respect", kind="tts", voice="sarah", settings=DRAMATIC, trim="tight",
+         text="She did the most damage. SHE did. Say it. Put some respect on it."),
+    dict(name="damage_share", kind="tts", voice="laura", settings=DRAMATIC, trim="tight",
+         text="Forty percent damage share. Forty. She's carrying this whole relationship."),
+    dict(name="deaths_are_content", kind="tts", voice="will", settings=CASUAL, trim="tight",
+         text="Nine deaths? That's not a stat. That's content."),
 ]
 
 # ---------------------------------------------------------------------------
