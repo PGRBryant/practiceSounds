@@ -1078,3 +1078,11 @@ i_blame_everyone:
     squeeze: atempo x1.046 (5.23s -> fits)
     FINAL: 5.04s, 119 KB  [OK]
 
+==== run 2026-09-16 16:46:30 UTC | takes=2 | formats: tts=pcm_44100, sfx=mp3_44100_192 ====
+you_did_not_got_this:
+    take 1 [pcm_44100]: 4.04s  rms -18.6  peak -0.6  tail -84.8  -> score -16.6
+    take 2 [pcm_44100]: 5.62s  rms -20.3  peak -1.0  tail -85.7  -> score -18.3
+    PICK: take 1 (score -16.6)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -17.39 LUFS)
+    FINAL: 3.92s, 92 KB  [OK]
+
