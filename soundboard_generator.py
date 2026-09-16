@@ -2,8 +2,8 @@
 """
 Discord Soundboard Generator — lab edition
 ==========================================
-Generates 109 meme-grade soundboard clips with the ElevenLabs API:
-28 AI sound effects + 81 voice lines (Jake, Reece, and the whole lobby).
+Generates 125 meme-grade soundboard clips with the ElevenLabs API:
+28 AI sound effects + 97 voice lines (Jake, Reece, and the whole lobby).
 
 Every final clip fits Discord's soundboard hard caps:
   * max 5.2 seconds   (verified with ffprobe; auto-squeezed if a hair over)
@@ -359,6 +359,40 @@ SOUNDS = [
          text="Jake and Reece have one kill between them. Shared. Like a custody arrangement."),
     dict(name="cant_carry_conversation", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
          text="Carry me, Jake. ...Jake can't carry a conversation, mate."),
+
+    # ---------- ROUND 8: ANONYMOUS RAZZING (fire at whoever just died) ----------
+    dict(name="cant_carry_convo", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="Carry you? ...You can't carry a conversation, mate."),
+    dict(name="custody_brain_cell", kind="tts", voice="george", settings=DEADPAN, trim="tight",
+         text="You have one kill between you. One brain cell. Like a custody arrangement."),
+    dict(name="you_did_not_got_this", kind="tts", voice="adam", settings=DRAMATIC, trim="tight",
+         text="You said... I got this. ...You did not got this."),
+    dict(name="trusted_you_last_round", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="Trust you? I trusted you last round, mate. Look at me. I'm dead."),
+    dict(name="you_are_the_process", kind="tts", voice="george", settings=DEADPAN, trim="tight",
+         text="Trust the process. ...You ARE the process. That's the problem."),
+    dict(name="same_sentence", kind="tts", voice="adam", settings=DEADPAN, trim="tight",
+         text="You said you'd carry. You're zero and eight. Those are the same sentence now."),
+    dict(name="sixth_my_bad", kind="tts", voice="adam", settings=DEADPAN, trim="tight",
+         text="That's your sixth my bad. At some point it stops being an accident."),
+    dict(name="dying_slower", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="You're not scaling, mate. You're just dying slower."),
+    dict(name="outplayed_by_ring", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="OUTPLAYED! ...by the Ring of Fire. The ring outplayed him."),
+    dict(name="try_playing", kind="tts", voice="adam", settings=DEADPAN, trim="tight",
+         text="You're thinking. Great. Try playing."),
+    dict(name="here_for_the_snacks", kind="tts", voice="george", settings=DEADPAN, trim="tight",
+         text="The Guest of Honor did more than you. He's a guest. He's here for the snacks."),
+    dict(name="big_orange_circle", kind="tts", voice="lily", settings=ANGRY, trim="tight",
+         text="You're in the fire AGAIN! It's ORANGE! It's a big ORANGE circle!"),
+    dict(name="apology_accepted", kind="tts", voice="adam", settings=DEADPAN, trim="tight",
+         text="Apology accepted. Play better."),
+    dict(name="spectator_energy", kind="tts", voice="george", settings=DEADPAN, trim="tight",
+         text="You have spectator energy. You're playing, technically. But spectator energy."),
+    dict(name="specifically_you", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="We're cooked. Not because of them. Because of you. Specifically you."),
+    dict(name="i_blame_everyone", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="I blame you. I blame him. I blame the Guest of Honor. I blame the lobby."),
 ]
 
 # ---------------------------------------------------------------------------
