@@ -2,8 +2,8 @@
 """
 Discord Soundboard Generator — lab edition
 ==========================================
-Generates 155 meme-grade soundboard clips with the ElevenLabs API:
-29 AI sound effects + 126 voice lines (Jake, Reece, and the whole lobby).
+Generates 171 meme-grade soundboard clips with the ElevenLabs API:
+29 AI sound effects + 142 voice lines (Jake, Reece, and the whole lobby).
 
 Every final clip fits Discord's soundboard hard caps:
   * max 5.2 seconds   (verified with ffprobe; auto-squeezed if a hair over)
@@ -113,6 +113,9 @@ VOICES = {
     "brian":   "nPczCjzI2devNBz1zQrb",  # deep, resonant         -> movie trailer #2
     "oliver":  "jfIS2w2yJi0grJZPyEsk",  # deep gravel Brit       -> HUZZAH
     "will":    "bIHbv24MWmeRgasZH58o",  # relaxed optimist       -> "look at us, legends"
+    "river":   "SAz9YHcvj6GT2YYXdXww",  # neutral, calm          -> "it's giving... eighth"
+    "sarah":   "EXAVITQu4vr4xnSDxMaL",  # mature, confident      -> diva energy
+    "eric":    "cjVigY5qzO86Huf0OWal",  # smooth, trustworthy    -> the smooth one
 }
 
 # Meme performances want exaggeration; a narrator's 0.5/0.25 would flatten them.
@@ -470,6 +473,40 @@ SOUNDS = [
          text="Well played. Truly. No notes. ...One note. But well played."),
     dict(name="we_survived_v2", kind="tts", voice="will", settings=CASUAL, trim="tight",
          text="We survived the fire! Both of us! Alive! Look at us. Legends."),
+
+    # ---------- ROUND 10: CHEEKY (camp reads + gamer double entendres, PG-13) ----------
+    dict(name="the_audacity", kind="tts", voice="laura", settings=DRAMATIC, trim="tight",
+         text="The audacity. The AUDACITY. To die like that. In front of me."),
+    dict(name="girl_the_bread", kind="tts", voice="jessica", settings=DRAMATIC, trim="tight",
+         text="Not the bread augment. Girl. GIRL. We talked about this."),
+    dict(name="its_giving_eighth", kind="tts", voice="river", settings=DEADPAN, trim="tight",
+         text="It's giving... spectator. It's giving... eighth place. It's giving up."),
+    dict(name="mother_has_arrived", kind="tts", voice="sarah", settings=DRAMATIC, trim="tight",
+         text="Mother has ARRIVED. ...Mother is dead. Mother had one HP the whole time."),
+    dict(name="died_so_pretty", kind="tts", voice="will", settings=CASUAL, trim="tight",
+         text="You died so pretty. Honestly. Gorgeous death. Ten out of ten."),
+    dict(name="top_or_bottom_lane", kind="tts", voice="liam", settings=CASUAL, trim="tight",
+         text="Top or bottom? ...LANE. Top or bottom LANE. Answer the question."),
+    dict(name="so_thick", kind="tts", voice="eric", settings=CASUAL, trim="tight",
+         text="Ooh, he's a tank. He's so THICK. So much health. Respect."),
+    dict(name="flash_on_me", kind="tts", voice="jessica", settings=CASUAL, trim="tight",
+         text="Flash on me. Flash ON me. ...No, the spell. Use the spell."),
+    dict(name="went_in_raw", kind="tts", voice="harry", settings=DRAMATIC, trim="tight",
+         text="He went in RAW! No wards! No vision! Just went in RAW!"),
+    dict(name="ganked_from_behind", kind="tts", voice="laura", settings=DRAMATIC, trim="tight",
+         text="Ganked from behind. AGAIN. And you LOVED it."),
+    dict(name="ill_peel_for_you", kind="tts", voice="brian", settings=DRAMATIC, trim="tight",
+         text="I'll peel for you, baby. I'll peel for you all night."),
+    dict(name="basically_married", kind="tts", voice="alice", settings=DEADPAN, trim="tight",
+         text="You two are duo queue. You're basically married. Now fight about it."),
+    dict(name="little_bit_a_date", kind="tts", voice="will", settings=CASUAL, trim="tight",
+         text="It's a two v two, not a date. ...It's a little bit a date."),
+    dict(name="filthy_backdoor", kind="tts", voice="oliver", settings=DRAMATIC, trim="tight",
+         text="That backdoor was FILTHY. Filthy. ...I'm blushing."),
+    dict(name="hard_to_kill", kind="tts", voice="daniel", settings=DEADPAN, trim="tight",
+         text="He's hard. To kill. He's hard to kill. Why is everyone laughing."),
+    dict(name="kiss_kill", kind="tts", voice="liam", settings=CASUAL, trim="tight",
+         text="Give me a kiss— a KILL. Give me a kill. ...Kiss also fine."),
 ]
 
 # ---------------------------------------------------------------------------
