@@ -2,8 +2,8 @@
 """
 Discord Soundboard Generator — lab edition
 ==========================================
-Generates 203 meme-grade soundboard clips with the ElevenLabs API:
-29 AI sound effects + 174 voice lines (Jake, Reece, and the whole lobby).
+Generates 217 meme-grade soundboard clips with the ElevenLabs API:
+29 AI sound effects + 188 voice lines (Jake, Reece, and the whole lobby).
 
 Every final clip fits Discord's soundboard hard caps:
   * max 5.2 seconds   (verified with ffprobe; auto-squeezed if a hair over)
@@ -123,6 +123,7 @@ DRAMATIC = {"stability": 0.30, "similarity_boost": 0.75, "style": 0.85, "use_spe
 ANGRY    = {"stability": 0.25, "similarity_boost": 0.75, "style": 0.90, "use_speaker_boost": True}
 DEADPAN  = {"stability": 0.95, "similarity_boost": 0.75, "style": 0.05, "use_speaker_boost": True}
 CASUAL   = {"stability": 0.45, "similarity_boost": 0.75, "style": 0.45, "use_speaker_boost": True}
+HYPE     = {"stability": 0.15, "similarity_boost": 0.70, "style": 1.00, "use_speaker_boost": True}
 
 # ---------------------------------------------------------------------------
 # THE SOUNDS
@@ -543,12 +544,12 @@ SOUNDS = [
          text="Reece wants to one v one Jake. Behind the shop. ...It's not a fight, is it, Reece."),
 
     # ---------- ROUND 12: STATS (damage charts as a personality) ----------
-    dict(name="damage_charts", kind="tts", voice="laura", settings=DRAMATIC, trim="tight",
-         text="Damage charts."),
-    dict(name="damage_doesnt_matter", kind="tts", voice="jessica", settings=DRAMATIC, trim="tight",
-         text="Damage doesn't matter!"),
-    dict(name="kda_doesnt_matter", kind="tts", voice="harry", settings=ANGRY, trim="tight",
-         text="KDA DOESN'T MATTER!!"),
+    dict(name="damage_charts", kind="tts", voice="harry", settings=HYPE, trim="tight",
+         text="DAMAGE CHAAARTS! DAMAGE CHARTS, BABY!"),
+    dict(name="damage_doesnt_matter", kind="tts", voice="liam", settings=HYPE, trim="tight",
+         text="DAMAGE DOESN'T MATTER! IT DOESN'T MATTER! WE LOST!"),
+    dict(name="kda_doesnt_matter", kind="tts", voice="callum", settings=HYPE, trim="tight",
+         text="KDA! DOESN'T! MATTER! K! D! A!"),
     dict(name="look_at_the_charts", kind="tts", voice="sarah", settings=DRAMATIC, trim="tight",
          text="Look at the CHARTS, sweetie. Look at them. Scroll down. Keep scrolling."),
     dict(name="most_damage_eighth", kind="tts", voice="river", settings=DEADPAN, trim="tight",
@@ -575,6 +576,38 @@ SOUNDS = [
          text="Forty percent damage share. Forty. She's carrying this whole relationship."),
     dict(name="deaths_are_content", kind="tts", voice="will", settings=CASUAL, trim="tight",
          text="Nine deaths? That's not a stat. That's content."),
+
+    # ---------- ROUND 13A: DAMAGE CHARTS, BUT LOUDER ----------
+    dict(name="check_the_charts", kind="tts", voice="charlie", settings=HYPE, trim="tight",
+         text="CHECK THE CHARTS! CHECK 'EM! SCROLL DOWN! WHO'S AT THE TOP? ME!"),
+    dict(name="top_of_the_charts", kind="tts", voice="laura", settings=HYPE, trim="tight",
+         text="TOP of the damage charts! TOP! Say it with me! TOP!"),
+
+    # ---------- ROUND 13B: STREAMER BRAIN (first person, personal, emotional) ----------
+    dict(name="i_did_nothing", kind="tts", voice="chris", settings=CASUAL, trim="tight",
+         text="Damn. I did nothing. I literally did nothing. Nothing."),
+    dict(name="i_hate_that_champion", kind="tts", voice="liam", settings=ANGRY, trim="tight",
+         text="I HATE that champion. I hate him. I hate everything about him. DELETE him."),
+    dict(name="why_so_tanky", kind="tts", voice="harry", settings=ANGRY, trim="tight",
+         text="WHY is he so TANKY?! WHY?! What is he BUILDING?!"),
+    dict(name="how_did_i_die", kind="tts", voice="will", settings=CASUAL, trim="tight",
+         text="How did I die there? How? What killed me? Who did that?"),
+    dict(name="im_so_bad", kind="tts", voice="jessica", settings=CASUAL, trim="tight",
+         text="I'm actually so bad. I'm the worst player alive. Why am I like this?"),
+    dict(name="chat_im_cooked", kind="tts", voice="liam", settings=CASUAL, trim="tight",
+         text="Chat. Chat, I'm cooked. I'm so cooked. It's over."),
+    dict(name="were_fine", kind="tts", voice="chris", settings=ANGRY, trim="tight",
+         text="Okay. Okay okay okay. We're fine. We're fine. We're NOT fine."),
+    dict(name="hes_so_lucky", kind="tts", voice="adam", settings=ANGRY, trim="tight",
+         text="He's so LUCKY. That's luck! That's not skill, that's LUCK!"),
+    dict(name="im_done_one_more", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="I'm done. I'm done. I'm actually done, mate. ...One more."),
+    dict(name="no_no_no", kind="tts", voice="harry", settings=HYPE, trim="tight",
+         text="No no no no no no NO! NO!"),
+    dict(name="im_washed", kind="tts", voice="will", settings=CASUAL, trim="tight",
+         text="I'm so washed. I'm washed. I used to be good. I used to be GOOD."),
+    dict(name="i_did_everything", kind="tts", voice="adam", settings=DRAMATIC, trim="tight",
+         text="I did EVERYTHING. I did everything... and it didn't matter."),
 ]
 
 # ---------------------------------------------------------------------------
