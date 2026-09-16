@@ -1212,3 +1212,112 @@ it_was_lag:
     master: loudnorm 2-pass linear -> -14.0 LUFS (was -15.68 LUFS)
     FINAL: 4.65s, 110 KB  [OK]
 
+==== run 2026-09-16 17:34:10 UTC | takes=2 | formats: tts=pcm_44100, sfx=mp3_44100_192 ====
+not_my_fault_v2:
+    take 1 [pcm_44100]: 5.57s  rms -24.1  peak -6.9  tail -87.5  -> score -22.1
+    take 2 [pcm_44100]: 4.32s  rms -23.5  peak -7.8  tail -87.7  -> score -21.5
+    PICK: take 2 (score -21.5)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -23.01 LUFS)
+    FINAL: 4.10s, 97 KB  [OK]
+
+it_was_lag_v2:
+    take 1 [pcm_44100]: 3.95s  rms -24.1  peak -5.4  tail -87.5  -> score -22.1
+    take 2 [pcm_44100]: 4.13s  rms -25.2  peak -6.7  tail -87.7  -> score -23.2
+    PICK: take 1 (score -22.1)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -22.58 LUFS)
+    FINAL: 3.71s, 88 KB  [OK]
+
+my_screen_froze_v2:
+    take 1 [pcm_44100]: 5.90s  rms -23.5  peak -5.1  tail -81.3  -> score -21.5
+    take 2 [pcm_44100]: 5.39s  rms -21.8  peak -1.7  tail -87.1  -> score -19.8
+    PICK: take 2 (score -19.8)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -21.02 LUFS)
+    squeeze: atempo x1.040 (5.20s -> fits)
+    FINAL: 5.04s, 119 KB  [OK]
+
+sun_in_my_eyes_v2:
+    take 1 [pcm_44100]: 5.62s  rms -24.8  peak -5.3  tail -87.6  -> score -22.8
+    take 2 [pcm_44100]: 6.13s  rms -24.4  peak -5.9  tail -87.7  -> score -22.4
+    PICK: take 2 (score -22.4)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -23.82 LUFS)
+    squeeze: atempo x1.168 (5.84s -> fits)
+    FINAL: 5.04s, 119 KB  [OK]
+
+cat_on_keyboard_v2:
+    take 1 [pcm_44100]: 5.02s  rms -24.6  peak -6.4  tail -87.5  -> score -22.6
+    take 2 [pcm_44100]: 4.92s  rms -23.7  peak -4.4  tail -87.5  -> score -21.7
+    PICK: take 2 (score -21.7)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -23.42 LUFS)
+    FINAL: 4.68s, 110 KB  [OK]
+
+i_pinged_it_v2:
+    take 1 [pcm_44100]: 4.92s  rms -22.3  peak -7.5  tail -87.5  -> score -20.3
+    take 2 [pcm_44100]: 5.11s  rms -24.2  peak -6.6  tail -87.8  -> score -22.2
+    PICK: take 1 (score -20.3)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -21.01 LUFS)
+    FINAL: 4.73s, 111 KB  [OK]
+
+augment_was_bait_v2:
+    take 1 [pcm_44100]: 5.34s  rms -24.8  peak -4.9  tail -87.4  -> score -22.8
+    take 2 [pcm_44100]: 5.71s  rms -21.4  peak -0.9  tail -88.0  -> score -19.4
+    PICK: take 2 (score -19.4)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -21.47 LUFS)
+    squeeze: atempo x1.075 (5.38s -> fits)
+    FINAL: 5.04s, 119 KB  [OK]
+
+mouse_slipped_v2:
+    take 1 [pcm_44100]: 5.29s  rms -22.6  peak -1.2  tail -85.4  -> score -20.6
+    take 2 [pcm_44100]: 4.32s  rms -22.0  peak -3.0  tail -87.7  -> score -20.0
+    PICK: take 2 (score -20.0)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -21.59 LUFS)
+    FINAL: 4.08s, 96 KB  [OK]
+
+huzzah_v2:
+    take 1 [pcm_44100]: 4.13s  rms -22.3  peak -4.2  tail -90.4  -> score -20.3
+    take 2 [pcm_44100]: 4.83s  rms -23.3  peak -1.2  tail -90.4  -> score -21.3
+    PICK: take 1 (score -20.3)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -22.72 LUFS)
+    FINAL: 4.00s, 94 KB  [OK]
+
+first_place_v2:
+    take 1 [pcm_44100]: 4.69s  rms -23.7  peak -3.4  tail -87.8  -> score -21.7
+    take 2 [pcm_44100]: 5.90s  rms -24.6  peak -5.5  tail -87.5  -> score -22.6
+    PICK: take 1 (score -21.7)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -22.92 LUFS)
+    FINAL: 4.55s, 107 KB  [OK]
+
+mvp_clip_that_v2:
+    take 1 [pcm_44100]: 3.95s  rms -22.9  peak -6.5  tail -87.5  -> score -20.9
+    take 2 [pcm_44100]: 3.67s  rms -22.1  peak -4.8  tail -87.2  -> score -20.1
+    PICK: take 2 (score -20.1)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -22.46 LUFS)
+    FINAL: 3.42s, 81 KB  [OK]
+
+clip_it_v2:
+    take 1 [pcm_44100]: 2.51s  rms -21.3  peak -3.7  tail -87.1  -> score -19.3
+    take 2 [pcm_44100]: 2.23s  rms -21.9  peak -3.4  tail -87.7  -> score -19.9
+    PICK: take 1 (score -19.3)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -20.50 LUFS)
+    FINAL: 2.32s, 55 KB  [OK]
+
+proud_of_you_v2:
+    take 1 [pcm_44100]: 5.71s  rms -25.0  peak -3.3  tail -80.2  -> score -23.0
+    take 2 [pcm_44100]: 5.11s  rms -24.5  peak -3.8  tail -78.7  -> score -22.5
+    PICK: take 2 (score -22.5)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -23.05 LUFS)
+    FINAL: 4.91s, 116 KB  [OK]
+
+no_notes_v2:
+    take 1 [pcm_44100]: 4.78s  rms -21.8  peak -3.5  tail -87.5  -> score -19.8
+    take 2 [pcm_44100]: 4.74s  rms -21.7  peak -4.7  tail -87.6  -> score -19.7
+    PICK: take 2 (score -19.7)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -21.55 LUFS)
+    FINAL: 4.52s, 107 KB  [OK]
+
+we_survived_v2:
+    take 1 [pcm_44100]: 3.62s  rms -22.2  peak -3.9  tail -81.0  -> score -20.2
+    take 2 [pcm_44100]: 3.95s  rms -22.5  peak -2.7  tail -39.4  -> score -22.5
+    PICK: take 1 (score -20.2)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -22.03 LUFS)
+    FINAL: 3.40s, 80 KB  [OK]
+
