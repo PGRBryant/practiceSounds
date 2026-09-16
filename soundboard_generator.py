@@ -395,7 +395,7 @@ SOUNDS = [
     dict(name="not_my_fault", kind="tts", voice="charlie", settings=ANGRY, trim="tight",
          text="I blame you. I blame him. I blame the lobby. NOT MY FAULT!"),
     dict(name="it_was_lag", kind="tts", voice="adam", settings=ANGRY, trim="tight",
-         text="That was LAG! That was lag! ...It wasn't lag. But it was LAG!"),
+         text="That was LAG! ...It wasn't lag. But it was LAG!"),
     dict(name="my_screen_froze", kind="tts", voice="lily", settings=ANGRY, trim="tight",
          text="My screen FROZE! It froze! ...It did not freeze. I panicked. NOT MY FAULT!"),
     dict(name="sun_in_my_eyes", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
