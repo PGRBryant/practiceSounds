@@ -803,3 +803,20 @@ scouting_report:
     squeeze: atempo x1.123 (5.62s -> fits)
     FINAL: 5.04s, 119 KB  [OK]
 
+==== run 2026-09-16 05:07:30 UTC | takes=2 | formats: tts=pcm_44100, sfx=mp3_44100_192 ====
+roy_no_hitter:
+    take 1 [pcm_44100]: 5.39s  rms -19.1  peak -2.5  tail -81.1  -> score -17.1
+    take 2 [pcm_44100]: 5.02s  rms -20.7  peak -4.4  tail -87.8  -> score -18.7
+    PICK: take 1 (score -17.1)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -19.12 LUFS)
+    squeeze: atempo x1.024 (5.12s -> fits)
+    FINAL: 5.04s, 119 KB  [OK]
+
+reece_burrito:
+    take 1 [pcm_44100]: 4.55s  rms -14.7  peak -1.0  tail -85.6  -> score -12.7
+    take 2 [pcm_44100]: 5.39s  rms -14.2  peak -0.3  tail -55.4  -> score -12.2
+    PICK: take 2 (score -12.2)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -13.76 LUFS)
+    squeeze: atempo x1.070 (5.35s -> fits)
+    FINAL: 5.04s, 119 KB  [OK]
+
