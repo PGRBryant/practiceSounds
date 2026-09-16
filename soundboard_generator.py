@@ -2,8 +2,8 @@
 """
 Discord Soundboard Generator — lab edition
 ==========================================
-Generates 125 meme-grade soundboard clips with the ElevenLabs API:
-28 AI sound effects + 97 voice lines (Jake, Reece, and the whole lobby).
+Generates 140 meme-grade soundboard clips with the ElevenLabs API:
+29 AI sound effects + 111 voice lines (Jake, Reece, and the whole lobby).
 
 Every final clip fits Discord's soundboard hard caps:
   * max 5.2 seconds   (verified with ffprobe; auto-squeezed if a hair over)
@@ -391,8 +391,41 @@ SOUNDS = [
          text="You have spectator energy. You're playing, technically. But spectator energy."),
     dict(name="specifically_you", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
          text="We're cooked. Not because of them. Because of you. Specifically you."),
-    dict(name="i_blame_everyone", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
-         text="I blame you. I blame him. I blame the Guest of Honor. I blame the lobby."),
+    # ---------- ROUND 9A: NOT MY FAULT (deflection at full volume) ----------
+    dict(name="not_my_fault", kind="tts", voice="charlie", settings=ANGRY, trim="tight",
+         text="I blame you. I blame him. I blame the lobby. NOT MY FAULT!"),
+    dict(name="it_was_lag", kind="tts", voice="adam", settings=ANGRY, trim="tight",
+         text="That was LAG! That was lag! ...It wasn't lag. But it was LAG!"),
+    dict(name="my_screen_froze", kind="tts", voice="lily", settings=ANGRY, trim="tight",
+         text="My screen FROZE! It froze! ...It did not freeze. I panicked. NOT MY FAULT!"),
+    dict(name="sun_in_my_eyes", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="The sun was in my eyes, mate. ...I'm indoors. Still counts. Not my fault."),
+    dict(name="cat_on_keyboard", kind="tts", voice="george", settings=DEADPAN, trim="tight",
+         text="The cat was on the keyboard. ...I don't have a cat. Not my fault."),
+    dict(name="i_pinged_it", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="I PINGED IT! I pinged it! ...I pinged the shop. But I PINGED!"),
+    dict(name="augment_was_bait", kind="tts", voice="charlie", settings=ANGRY, trim="tight",
+         text="The augment was BAIT, mate! Bait! ...Fine, I took the bait. Not my fault it was bait!"),
+    dict(name="mouse_slipped", kind="tts", voice="lily", settings=ANGRY, trim="tight",
+         text="My MOUSE slipped! It slipped! Four times! In a ROW! NOT MY FAULT!"),
+
+    # ---------- ROUND 9B: HUZZAH (positive, for the one good round) ----------
+    dict(name="huzzah", kind="tts", voice="george", settings=DRAMATIC, trim="tight",
+         text="HUZZAH! A round! We won a ROUND! Somebody write this down!"),
+    dict(name="first_place", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="FIRST PLACE! FIRST PLACE! I have NEVER seen this! LADIES AND GENTLEMEN!"),
+    dict(name="mvp_clip_that", kind="tts", voice="adam", settings=DRAMATIC, trim="tight",
+         text="The MVP. The legend. The man of the hour. Somebody clip that."),
+    dict(name="clip_it", kind="tts", voice="charlie", settings=DRAMATIC, trim="tight",
+         text="CLIP IT! Clip it, mate! That's going on the WALL!"),
+    dict(name="proud_of_you", kind="tts", voice="lily", settings=CASUAL, trim="tight",
+         text="I'm so PROUD of you! Look at you! Playing the game! Like a champion!"),
+    dict(name="no_notes", kind="tts", voice="george", settings=DEADPAN, trim="tight",
+         text="Well played. Truly. No notes. ...One note. But well played."),
+    dict(name="we_survived", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="We survived the fire, mate! Both of us! Alive! Look at us. Legends."),
+    dict(name="crowd_cheer", kind="sfx", seconds=3.0, trim="gentle",
+         prompt="Stadium crowd erupting in cheers, whistles and applause, huge celebration"),
 ]
 
 # ---------------------------------------------------------------------------
