@@ -366,7 +366,7 @@ SOUNDS = [
     dict(name="custody_brain_cell", kind="tts", voice="george", settings=DEADPAN, trim="tight",
          text="You have one kill between you. One brain cell. Like a custody arrangement."),
     dict(name="you_did_not_got_this", kind="tts", voice="adam", settings=DRAMATIC, trim="tight",
-         text="You said... I got this. ...You did not got this."),
+         text="You said, I got this. ...You did not got this."),
     dict(name="trusted_you_last_round", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
          text="Trust you? I trusted you last round, mate. Look at me. I'm dead."),
     dict(name="you_are_the_process", kind="tts", voice="george", settings=DEADPAN, trim="tight",
