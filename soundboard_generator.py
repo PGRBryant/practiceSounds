@@ -2,8 +2,8 @@
 """
 Discord Soundboard Generator — lab edition
 ==========================================
-Generates 171 meme-grade soundboard clips with the ElevenLabs API:
-29 AI sound effects + 142 voice lines (Jake, Reece, and the whole lobby).
+Generates 187 meme-grade soundboard clips with the ElevenLabs API:
+29 AI sound effects + 158 voice lines (Jake, Reece, and the whole lobby).
 
 Every final clip fits Discord's soundboard hard caps:
   * max 5.2 seconds   (verified with ffprobe; auto-squeezed if a hair over)
@@ -507,6 +507,40 @@ SOUNDS = [
          text="He's hard. To kill. He's hard to kill. Why is everyone laughing."),
     dict(name="kiss_kill", kind="tts", voice="liam", settings=CASUAL, trim="tight",
          text="Give me a kiss— a KILL. Give me a kill. ...Kiss also fine."),
+
+    # ---------- ROUND 11: JAKE vs REECE, CHEEKY RIVALRY ----------
+    dict(name="tension_open_window", kind="tts", voice="sarah", settings=DRAMATIC, trim="tight",
+         text="The tension between Jake and Reece. Somebody open a window."),
+    dict(name="reece_jealous", kind="tts", voice="laura", settings=DRAMATIC, trim="tight",
+         text="Reece is jealous. Jake got a kill and Reece is JEALOUS. It's cute."),
+    dict(name="jake_watching", kind="tts", voice="alice", settings=DEADPAN, trim="tight",
+         text="Jake has been watching Reece die for three rounds. Watching. Not helping. Watching."),
+    dict(name="enemies_to_lovers", kind="tts", voice="river", settings=DEADPAN, trim="tight",
+         text="Jake and Reece. Enemies to lovers. Currently enemies. Currently losing."),
+    dict(name="reece_would_die", kind="tts", voice="will", settings=CASUAL, trim="tight",
+         text="Reece would die for Jake. He just did. Twice. Romantic."),
+    dict(name="bridal_style", kind="tts", voice="brian", settings=DRAMATIC, trim="tight",
+         text="Jake carried Reece. Bridal style. All the way to eighth place."),
+    dict(name="pick_me_jake", kind="tts", voice="jessica", settings=DRAMATIC, trim="tight",
+         text="Pick me, Jake! Pick ME! ...He picked the bread augment. Over Reece."),
+    dict(name="divorce_round_four", kind="tts", voice="daniel", settings=DEADPAN, trim="tight",
+         text="Jake and Reece are getting a divorce. Round four. Irreconcilable positioning."),
+    dict(name="stole_his_heart", kind="tts", voice="liam", settings=CASUAL, trim="tight",
+         text="Reece stole Jake's kill. And his heart. Mostly the kill."),
+    dict(name="they_switch", kind="tts", voice="laura", settings=CASUAL, trim="tight",
+         text="Jake's bottom lane. Reece is top. ...They switch every game. Don't make it weird."),
+    dict(name="hugging_in_fire", kind="tts", voice="harry", settings=DRAMATIC, trim="tight",
+         text="Reece FLASHED! Straight into Jake! On PURPOSE! They're HUGGING! In the FIRE!"),
+    dict(name="sure_jake", kind="tts", voice="eric", settings=CASUAL, trim="tight",
+         text="Jake says he hates Reece. Jake queues with Reece every night. Sure, Jake."),
+    dict(name="just_kiss_or_play", kind="tts", voice="chris", settings=CASUAL, trim="tight",
+         text="Jake and Reece are fighting in the call again. Just kiss. Or play. One of the two."),
+    dict(name="the_way_reece_looks", kind="tts", voice="oliver", settings=DRAMATIC, trim="tight",
+         text="The way Reece looks at Jake when Jake misses. Pure hatred. Pure... something."),
+    dict(name="kiss_to_break_tie", kind="tts", voice="river", settings=DEADPAN, trim="tight",
+         text="Jake: two kills. Reece: two kills. Tied. Kiss to break the tie."),
+    dict(name="behind_the_shop", kind="tts", voice="liam", settings=CASUAL, trim="tight",
+         text="Reece wants to one v one Jake. Behind the shop. ...It's not a fight, is it, Reece."),
 ]
 
 # ---------------------------------------------------------------------------
