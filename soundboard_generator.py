@@ -2,8 +2,8 @@
 """
 Discord Soundboard Generator — lab edition
 ==========================================
-Generates 45 meme-grade soundboard clips with the ElevenLabs API:
-27 AI sound effects + 18 voice lines (Jake, Reece, and the whole lobby).
+Generates 61 meme-grade soundboard clips with the ElevenLabs API:
+27 AI sound effects + 34 voice lines (Jake, Reece, and the whole lobby).
 
 Every final clip fits Discord's soundboard hard caps:
   * max 5.2 seconds   (verified with ffprobe; auto-squeezed if a hair over)
@@ -99,12 +99,15 @@ VOICES = {
     "adam":   "pNInz6obpgDQGcFmaJgB",  # deep American male -> movie-trailer guy
     "callum": "N2lVS1w4EtoT3dr4eOWO",  # gravelly + intense -> esports caster
     "lily":   "pFZP5JQG7iQjIQuC4Bku",  # British female     -> furious mum energy
+    "george": "JBFqnCBsd6RMkjVDRZzb",  # posh British male  -> weary condescension
+    "charlie": "IKne3meq5aSn9XLyUdCD", # casual Aussie male -> copium merchant
 }
 
 # Meme performances want exaggeration; a narrator's 0.5/0.25 would flatten them.
 DRAMATIC = {"stability": 0.30, "similarity_boost": 0.75, "style": 0.85, "use_speaker_boost": True}
 ANGRY    = {"stability": 0.25, "similarity_boost": 0.75, "style": 0.90, "use_speaker_boost": True}
 DEADPAN  = {"stability": 0.95, "similarity_boost": 0.75, "style": 0.05, "use_speaker_boost": True}
+CASUAL   = {"stability": 0.45, "similarity_boost": 0.75, "style": 0.45, "use_speaker_boost": True}
 
 # ---------------------------------------------------------------------------
 # THE SOUNDS
@@ -215,6 +218,40 @@ SOUNDS = [
          prompt="1990s dial-up modem connecting, screeching handshake tones and static, harsh and nostalgic"),
     dict(name="sad_airhorn", kind="sfx", seconds=3.0, trim="gentle",
          prompt="Airhorn that starts loud and hype then deflates, drooping down in pitch and dying pathetically"),
+
+    # ---------- ROUND 4: THINGS LEAGUE PLAYERS SAY TO EACH OTHER ----------
+    dict(name="roy_walks_in", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="AND ROY WALKS INTO FIVE PEOPLE! WHY, ROY?! WHYYY?!"),
+    dict(name="roy_dead_talking", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="Roy has been dead for forty seconds... and he is STILL... TALKING."),
+    dict(name="roy_this_summer", kind="tts", voice="adam", settings=DRAMATIC, trim="tight",
+         text="This summer... Roy... finally buys a ward."),
+    dict(name="roy_stole_my_kill", kind="tts", voice="lily", settings=ANGRY, trim="tight",
+         text="ROY! That was MY kill! MINE! I HAD it!"),
+    dict(name="roy_ill_carry", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="Roy said he'd carry, mate. ...Roy is zero and eight."),
+    dict(name="blanch_ward", kind="tts", voice="adam", settings=ANGRY, trim="tight",
+         text="BLANCH! Buy a ward! ONE ward! I am BEGGING you!"),
+    dict(name="who_is_blanch", kind="tts", voice="george", settings=DEADPAN, trim="tight",
+         text="Sorry... who is Blanch?"),
+    dict(name="blanch_alt_tabbed", kind="tts", voice="george", settings=CASUAL, trim="tight",
+         text="Blanch, are you alt-tabbed again? ...Blanch. We can hear the YouTube."),
+    dict(name="blanch_nice_ult", kind="tts", voice="lily", settings=DRAMATIC, trim="tight",
+         text="Niiiice ult, Blanch. Stunning. Truly. Nobody was there."),
+    dict(name="reece_not_tilted", kind="tts", voice="adam", settings=ANGRY, trim="tight",
+         text="I'M NOT TILTED! REECE IS NOT TILTED! WHO SAID TILTED?!"),
+    dict(name="reece_one_more_game", kind="tts", voice="adam", settings=DRAMATIC, trim="tight",
+         text="It's 3 AM. Reece says one more game. It is never... one more game."),
+    dict(name="not_feeding_scaling", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="Nah nah nah, I'm not feeding, Reece. I'm scaling. Trust."),
+    dict(name="jake_and_reece_bots", kind="tts", voice="george", settings=DEADPAN, trim="tight",
+         text="Jake and Reece are not bots. Bots would have warded."),
+    dict(name="jake_i_got_this", kind="tts", voice="adam", settings=DRAMATIC, trim="tight",
+         text="Jake said... I got this. ...Jake did not got this."),
+    dict(name="jake_flash", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="Jake has flash! Jake has— he flashed into the WALL. Into the wall."),
+    dict(name="jake_mother_phone", kind="tts", voice="lily", settings=ANGRY, trim="tight",
+         text="JAKE! Your mother is on the phone! No, I don't CARE that it's ranked!"),
 ]
 
 # ---------------------------------------------------------------------------
