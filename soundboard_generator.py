@@ -111,6 +111,7 @@ DEADPAN  = {"stability": 0.95, "similarity_boost": 0.75, "style": 0.05, "use_spe
 # trim="tight"  -> punchy one-shot: cut hard to the transient
 # trim="gentle" -> musical build/reverb tail: only true silence is removed,
 #                  so quiet intros and dying tails survive (they're the point)
+# trim="none"   -> quiet-by-design (crickets): nothing removed, micro-fades only
 # ---------------------------------------------------------------------------
 SOUNDS = [
     # ---------- FAST + ANNOYING ----------
@@ -200,7 +201,7 @@ SOUNDS = [
     # ---------- ROUND 3: GENERAL CHAOS ----------
     dict(name="record_scratch", kind="sfx", seconds=1.5, trim="tight",
          prompt="Vinyl record scratch, abrupt needle rip across the record, freeze-frame moment"),
-    dict(name="crickets", kind="sfx", seconds=4.5, trim="gentle",
+    dict(name="crickets", kind="sfx", seconds=4.5, trim="none",
          prompt="Awkward silence, crickets chirping quietly at night, one distant single cough"),
     dict(name="slide_whistle_fail", kind="sfx", seconds=3.0, trim="tight",
          prompt="Cartoon slide whistle descending, a long pathetic fall, ending in a small dull thud"),
@@ -332,6 +333,9 @@ TRIM_FILTERS = {
     "gentle": ("silenceremove=start_periods=1:start_threshold=-70dB:start_silence=0.05,"
                "areverse,silenceremove=start_periods=1:start_threshold=-70dB:start_silence=0.05,"
                "afade=t=in:d=0.06:curve=hsin,areverse,afade=t=in:d=0.012"),
+    # no trimming at all, micro-fades only: for sounds that are QUIET on purpose
+    # (crickets sit below every silence threshold — the quiet IS the content)
+    "none": "afade=t=in:d=0.012,areverse,afade=t=in:d=0.06:curve=hsin,areverse",
 }
 
 
