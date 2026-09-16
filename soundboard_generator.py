@@ -2,8 +2,8 @@
 """
 Discord Soundboard Generator — lab edition
 ==========================================
-Generates 61 meme-grade soundboard clips with the ElevenLabs API:
-27 AI sound effects + 34 voice lines (Jake, Reece, and the whole lobby).
+Generates 77 meme-grade soundboard clips with the ElevenLabs API:
+27 AI sound effects + 50 voice lines (Jake, Reece, and the whole lobby).
 
 Every final clip fits Discord's soundboard hard caps:
   * max 5.2 seconds   (verified with ffprobe; auto-squeezed if a hair over)
@@ -252,6 +252,40 @@ SOUNDS = [
          text="Jake has flash! Jake has— he flashed into the WALL. Into the wall."),
     dict(name="jake_mother_phone", kind="tts", voice="lily", settings=ANGRY, trim="tight",
          text="JAKE! Your mother is on the phone! No, I don't CARE that it's ranked!"),
+
+    # ---------- ROUND 5: ARENA ----------
+    dict(name="get_out_of_the_fire", kind="tts", voice="adam", settings=ANGRY, trim="tight",
+         text="JAKE! THE FIRE! GET OUT OF THE FIRE! WHY ARE YOU STANDING IN THE FIRE?!"),
+    dict(name="prismatic_bread", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="PRISMATIC! PRISMATIC! ...and Roy took the bread one."),
+    dict(name="who_picks_that", kind="tts", voice="george", settings=DEADPAN, trim="tight",
+         text="Blanch. Who picks that augment? Genuinely. Who?"),
+    dict(name="eighth_of_eight", kind="tts", voice="adam", settings=DEADPAN, trim="tight",
+         text="Eighth place. Out of eight."),
+    dict(name="crowd_favorite", kind="tts", voice="lily", settings=DRAMATIC, trim="tight",
+         text="Oooh, Reece picked the Crowd Favorite. The crowd... was wrong."),
+    dict(name="guest_executed", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="Roy is at ONE HP! And the Guest of Honor— OH! EXECUTED! Roy has been EXECUTED!"),
+    dict(name="corner_carry", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="Nah, Roy carried. I just stood in the corner, mate. Second place, baby."),
+    dict(name="bravery_blanch", kind="tts", voice="george", settings=CASUAL, trim="tight",
+         text="Blanch queued Bravery. Blanch has no idea what any of his buttons do."),
+    dict(name="eat_the_flower", kind="tts", voice="lily", settings=ANGRY, trim="tight",
+         text="JAKE! Stop eating the FLOWERS and FIGHT!"),
+    dict(name="ring_closing", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="The ring is CLOSING! The ring is CLOSING! And Jake... is still reading his augment."),
+    dict(name="pick_the_augment", kind="tts", voice="adam", settings=ANGRY, trim="tight",
+         text="PICK! PICK THE AUGMENT! ROY! THE TIMER! PIIIICK!"),
+    dict(name="one_other_person", kind="tts", voice="adam", settings=DEADPAN, trim="tight",
+         text="It's a two v two, Reece. There is exactly one other person to blame."),
+    dict(name="flee_toward_enemy", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="Blanch pressed Flee, mate... toward the enemy. Bold."),
+    dict(name="guest_did_more", kind="tts", voice="george", settings=DEADPAN, trim="tight",
+         text="The Guest of Honor did more damage than Blanch. He is a GUEST."),
+    dict(name="flash_last_round", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="Jake has flash! No— he used it LAST round. Jake does NOT have flash."),
+    dict(name="not_that_one", kind="tts", voice="lily", settings=ANGRY, trim="tight",
+         text="Not THAT one— Reece! Reece, not that— ...you took it. You took it."),
 ]
 
 # ---------------------------------------------------------------------------
