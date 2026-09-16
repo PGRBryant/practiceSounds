@@ -2,8 +2,8 @@
 """
 Discord Soundboard Generator — lab edition
 ==========================================
-Generates 140 meme-grade soundboard clips with the ElevenLabs API:
-29 AI sound effects + 111 voice lines (Jake, Reece, and the whole lobby).
+Generates 155 meme-grade soundboard clips with the ElevenLabs API:
+29 AI sound effects + 126 voice lines (Jake, Reece, and the whole lobby).
 
 Every final clip fits Discord's soundboard hard caps:
   * max 5.2 seconds   (verified with ffprobe; auto-squeezed if a hair over)
@@ -101,6 +101,18 @@ VOICES = {
     "lily":   "pFZP5JQG7iQjIQuC4Bku",  # British female     -> furious mum energy
     "george": "JBFqnCBsd6RMkjVDRZzb",  # posh British male  -> weary condescension
     "charlie": "IKne3meq5aSn9XLyUdCD", # casual Aussie male -> copium merchant
+    # round 9 v2 cast (from this account's catalog, voices.json)
+    "harry":   "SOYHLrjzK2X1ezoPC6cr",  # fierce warrior, rough  -> screams excuses
+    "liam":    "TX3LPaxmHKxFdv7VOQHJ",  # energetic creator      -> the gamer himself
+    "laura":   "FGY2WhTYpPnrIDTdsKH5",  # quirky, sassy          -> mouse-slipped energy
+    "jessica": "cgSgspJ2msm6clMCkdW9",  # playful, bright        -> cheerleader / meltdown
+    "bill":    "pqHfZKP75CvOlQylNhV4",  # wise old man           -> grandpa excuses
+    "daniel":  "onwK4e9ZLuTAKqWW03F9",  # steady British broadcaster
+    "alice":   "Xb7hH8MSUJpSbSDYk0k2",  # clear British educator -> polite verdicts
+    "chris":   "iP95p4xoKVk53GoZ742B",  # down-to-earth American -> losing it quietly
+    "brian":   "nPczCjzI2devNBz1zQrb",  # deep, resonant         -> movie trailer #2
+    "oliver":  "jfIS2w2yJi0grJZPyEsk",  # deep gravel Brit       -> HUZZAH
+    "will":    "bIHbv24MWmeRgasZH58o",  # relaxed optimist       -> "look at us, legends"
 }
 
 # Meme performances want exaggeration; a narrator's 0.5/0.25 would flatten them.
@@ -426,6 +438,38 @@ SOUNDS = [
          text="We survived the fire, mate! Both of us! Alive! Look at us. Legends."),
     dict(name="crowd_cheer", kind="sfx", seconds=3.0, trim="gentle",
          prompt="Stadium crowd erupting in cheers, whistles and applause, huge celebration"),
+
+    # ---------- ROUND 9 V2: same lines, new cast ----------
+    dict(name="not_my_fault_v2", kind="tts", voice="harry", settings=ANGRY, trim="tight",
+         text="I blame you. I blame him. I blame the lobby. NOT MY FAULT!"),
+    dict(name="it_was_lag_v2", kind="tts", voice="liam", settings=ANGRY, trim="tight",
+         text="That was LAG! ...It wasn't lag. But it was LAG!"),
+    dict(name="my_screen_froze_v2", kind="tts", voice="laura", settings=ANGRY, trim="tight",
+         text="My screen FROZE! It froze! ...It did not freeze. I panicked. NOT MY FAULT!"),
+    dict(name="sun_in_my_eyes_v2", kind="tts", voice="bill", settings=CASUAL, trim="tight",
+         text="The sun was in my eyes. ...I'm indoors. Still counts. Not my fault."),
+    dict(name="cat_on_keyboard_v2", kind="tts", voice="daniel", settings=DEADPAN, trim="tight",
+         text="The cat was on the keyboard. ...I don't have a cat. Not my fault."),
+    dict(name="i_pinged_it_v2", kind="tts", voice="harry", settings=DRAMATIC, trim="tight",
+         text="I PINGED IT! I pinged it! ...I pinged the shop. But I PINGED!"),
+    dict(name="augment_was_bait_v2", kind="tts", voice="chris", settings=ANGRY, trim="tight",
+         text="The augment was BAIT! Bait! ...Fine, I took the bait. Not my fault it was bait!"),
+    dict(name="mouse_slipped_v2", kind="tts", voice="jessica", settings=ANGRY, trim="tight",
+         text="My MOUSE slipped! It slipped! Four times! In a ROW! NOT MY FAULT!"),
+    dict(name="huzzah_v2", kind="tts", voice="oliver", settings=DRAMATIC, trim="tight",
+         text="HUZZAH! A round! We won a ROUND! Somebody write this down!"),
+    dict(name="first_place_v2", kind="tts", voice="liam", settings=DRAMATIC, trim="tight",
+         text="FIRST PLACE! FIRST PLACE! I have NEVER seen this! LADIES AND GENTLEMEN!"),
+    dict(name="mvp_clip_that_v2", kind="tts", voice="brian", settings=DRAMATIC, trim="tight",
+         text="The MVP. The legend. The man of the hour. Somebody clip that."),
+    dict(name="clip_it_v2", kind="tts", voice="laura", settings=DRAMATIC, trim="tight",
+         text="CLIP IT! Clip it! That's going on the WALL!"),
+    dict(name="proud_of_you_v2", kind="tts", voice="jessica", settings=CASUAL, trim="tight",
+         text="I'm so PROUD of you! Look at you! Playing the game! Like a champion!"),
+    dict(name="no_notes_v2", kind="tts", voice="alice", settings=DEADPAN, trim="tight",
+         text="Well played. Truly. No notes. ...One note. But well played."),
+    dict(name="we_survived_v2", kind="tts", voice="will", settings=CASUAL, trim="tight",
+         text="We survived the fire! Both of us! Alive! Look at us. Legends."),
 ]
 
 # ---------------------------------------------------------------------------
