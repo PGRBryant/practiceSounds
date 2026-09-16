@@ -290,7 +290,7 @@ SOUNDS = [
     # ---------- ROUND 6: THE DAY JOBS ----------
     # Roy: a pitcher living in the mountains of Quincy
     dict(name="roy_no_hitter", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
-         text="Roy threw a NO-HITTER! ...In Arena. Zero hits. Zero damage. A no-hitter."),
+         text="Roy threw a NO-HITTER! In Arena. Zero damage. A no-hitter."),
     dict(name="quincy_trailer", kind="tts", voice="adam", settings=DRAMATIC, trim="tight",
          text="From the mountains of Quincy... comes a man... who has never hit a Q."),
     dict(name="roy_bears_wifi", kind="tts", voice="lily", settings=ANGRY, trim="tight",
@@ -317,7 +317,7 @@ SOUNDS = [
     dict(name="reece_sunny_inside", kind="tts", voice="george", settings=DEADPAN, trim="tight",
          text="Seventy-two and sunny in San Diego. Reece is inside. Reece has been inside for six years."),
     dict(name="reece_burrito", kind="tts", voice="adam", settings=ANGRY, trim="tight",
-         text="Reece is eating a California burrito MID-FIGHT. AGAIN. Reece. REECE. Put it DOWN."),
+         text="Reece is eating a California burrito MID-FIGHT! Reece! REECE! Put it DOWN!"),
     dict(name="reece_beach_eighth", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
          text="Reece could be at the beach right now, mate. Instead he's eighth. Out of eight."),
     # the whole squad
