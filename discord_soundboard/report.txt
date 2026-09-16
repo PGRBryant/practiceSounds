@@ -944,3 +944,20 @@ cant_carry_conversation:
     master: loudnorm 2-pass linear -> -14.0 LUFS (was -23.14 LUFS)
     FINAL: 3.55s, 84 KB  [OK]
 
+==== run 2026-09-16 16:16:32 UTC | takes=2 | formats: tts=pcm_44100, sfx=mp3_44100_192 ====
+both_one_hp:
+    take 1 [pcm_44100]: 6.04s  rms -22.3  peak -4.8  tail -70.6  -> score -20.3
+    take 2 [pcm_44100]: 5.67s  rms -22.2  peak -2.8  tail -87.0  -> score -20.2
+    PICK: take 2 (score -20.2)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -22.00 LUFS)
+    squeeze: atempo x1.081 (5.40s -> fits)
+    FINAL: 5.07s, 119 KB  [OK]
+
+duo_is_dead:
+    take 1 [pcm_44100]: 6.73s  rms -21.7  peak -3.3  tail -87.4  -> score -19.7
+    take 2 [pcm_44100]: 5.62s  rms -21.7  peak -4.5  tail -78.6  -> score -19.7
+    PICK: take 1 (score -19.7)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -21.31 LUFS)
+    squeeze: atempo x1.286 (6.43s -> fits)
+    FINAL: 5.04s, 119 KB  [OK]
+
