@@ -1,0 +1,36 @@
+# One-off helper: dumps the ElevenLabs voice catalog for this account to voices.json
+name: List ElevenLabs Voices
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch voices
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          python3 - << 'EOF'
+          import json, os, urllib.request
+          req = urllib.request.Request("https://api.elevenlabs.io/v1/voices",
+                                       headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"]})
+          data = json.load(urllib.request.urlopen(req, timeout=60))
+          rows = []
+          for v in data["voices"]:
+              l = v.get("labels", {}) or {}
+              rows.append({"id": v["voice_id"], "name": v["name"], "category": v.get("category"),
+                           "accent": l.get("accent"), "gender": l.get("gender"), "age": l.get("age"),
+                           "description": l.get("description") or l.get("descriptive"),
+                           "use_case": l.get("use_case")})
+          json.dump(rows, open("voices.json", "w"), indent=1)
+          print(len(rows), "voices")
+          EOF
+      - name: Commit
+        run: |
+          git config user.name soundboard-bot
+          git config user.email actions@users.noreply.github.com
+          git add voices.json
+          git commit -m "Dump voice catalog" || echo "no change"
+          git push
