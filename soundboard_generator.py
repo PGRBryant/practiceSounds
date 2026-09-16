@@ -2,8 +2,8 @@
 """
 Discord Soundboard Generator — lab edition
 ==========================================
-Generates 29 meme-grade soundboard clips with the ElevenLabs API:
-16 AI sound effects + 13 voice lines (Jake, Reece, and the whole lobby).
+Generates 45 meme-grade soundboard clips with the ElevenLabs API:
+27 AI sound effects + 18 voice lines (Jake, Reece, and the whole lobby).
 
 Every final clip fits Discord's soundboard hard caps:
   * max 5.2 seconds   (verified with ffprobe; auto-squeezed if a hair over)
@@ -178,6 +178,42 @@ SOUNDS = [
          text="It's not a loss. It's character development."),
     dict(name="in_this_economy", kind="tts", voice="lily", settings=ANGRY, trim="tight",
          text="Zero and seven?! In THIS economy?!"),
+
+    # ---------- ROUND 3: LOL + GAMING CULTURE ----------
+    dict(name="question_mark_ping", kind="tts", voice="lily", settings=DRAMATIC, trim="tight",
+         text="Question mark? ...Question mark?! QUESTION MARK?!"),
+    dict(name="surrender_at_15", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="Surrender at FIFTEEN?! Are you SERIOUS right now?!"),
+    dict(name="report_support", kind="tts", voice="adam", settings=ANGRY, trim="tight",
+         text="Report support! Report support! REPORT! SUPPORT!"),
+    dict(name="skill_issue", kind="tts", voice="adam", settings=DEADPAN, trim="tight",
+         text="Skill issue."),
+    dict(name="one_v_nine", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="It's a ONE... versus... NINE!"),
+    dict(name="rage_quit_keyboard", kind="sfx", seconds=4.0, trim="tight",
+         prompt="Furious mechanical keyboard mashing, then a violent desk slam and a chair toppling over"),
+    dict(name="legendary_drop", kind="sfx", seconds=3.0, trim="gentle",
+         prompt="Video game legendary loot drop, magical rising sparkle shimmer into a triumphant golden chime hit"),
+    dict(name="game_over_8bit", kind="sfx", seconds=3.5, trim="gentle",
+         prompt="Retro 8-bit chiptune game over jingle, sad descending square-wave melody, original arcade style"),
+
+    # ---------- ROUND 3: GENERAL CHAOS ----------
+    dict(name="record_scratch", kind="sfx", seconds=1.5, trim="tight",
+         prompt="Vinyl record scratch, abrupt needle rip across the record, freeze-frame moment"),
+    dict(name="crickets", kind="sfx", seconds=4.5, trim="gentle",
+         prompt="Awkward silence, crickets chirping quietly at night, one distant single cough"),
+    dict(name="slide_whistle_fail", kind="sfx", seconds=3.0, trim="tight",
+         prompt="Cartoon slide whistle descending, a long pathetic fall, ending in a small dull thud"),
+    dict(name="bonk", kind="sfx", seconds=1.0, trim="tight",
+         prompt="Cartoon bonk, hollow wooden knock on a head, single comical hit"),
+    dict(name="clown_honk", kind="sfx", seconds=3.5, trim="tight",
+         prompt="Circus clown bicycle horn honking twice, then a short goofy carnival calliope sting"),
+    dict(name="machine_gun_fart", kind="sfx", seconds=3.0, trim="tight",
+         prompt="Rapid-fire machine gun fart burst, comedic, ending with one long squeaky one"),
+    dict(name="dial_up_modem", kind="sfx", seconds=5.0, trim="tight",
+         prompt="1990s dial-up modem connecting, screeching handshake tones and static, harsh and nostalgic"),
+    dict(name="sad_airhorn", kind="sfx", seconds=3.0, trim="gentle",
+         prompt="Airhorn that starts loud and hype then deflates, drooping down in pitch and dying pathetically"),
 ]
 
 # ---------------------------------------------------------------------------
