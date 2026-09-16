@@ -2,8 +2,8 @@
 """
 Discord Soundboard Generator — lab edition
 ==========================================
-Generates 77 meme-grade soundboard clips with the ElevenLabs API:
-27 AI sound effects + 50 voice lines (Jake, Reece, and the whole lobby).
+Generates 93 meme-grade soundboard clips with the ElevenLabs API:
+28 AI sound effects + 65 voice lines (Jake, Reece, and the whole lobby).
 
 Every final clip fits Discord's soundboard hard caps:
   * max 5.2 seconds   (verified with ffprobe; auto-squeezed if a hair over)
@@ -286,6 +286,45 @@ SOUNDS = [
          text="Jake has flash! No— he used it LAST round. Jake does NOT have flash."),
     dict(name="not_that_one", kind="tts", voice="lily", settings=ANGRY, trim="tight",
          text="Not THAT one— Reece! Reece, not that— ...you took it. You took it."),
+
+    # ---------- ROUND 6: THE DAY JOBS ----------
+    # Roy: a pitcher living in the mountains of Quincy
+    dict(name="roy_no_hitter", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="Roy threw a NO-HITTER! ...In Arena. Zero hits. Zero damage. A no-hitter."),
+    dict(name="quincy_trailer", kind="tts", voice="adam", settings=DRAMATIC, trim="tight",
+         text="From the mountains of Quincy... comes a man... who has never hit a Q."),
+    dict(name="roy_bears_wifi", kind="tts", voice="lily", settings=ANGRY, trim="tight",
+         text="Roy's lagging AGAIN! Roy! Tell the BEARS to get OFF the WIFI!"),
+    # Blanch: Roy's coach
+    dict(name="blanch_explains_roy", kind="tts", voice="george", settings=DEADPAN, trim="tight",
+         text="Blanch is Roy's coach. ...That explains Roy."),
+    dict(name="blanch_huddle", kind="tts", voice="adam", settings=DRAMATIC, trim="tight",
+         text="Huddle up! Roy, stop crying. Jake, put the flowers down. Reece— where's Reece?"),
+    dict(name="blanch_timeout", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="Blanch called a TIMEOUT! There are NO TIMEOUTS in Arena, Blanch!"),
+    dict(name="coach_whistle", kind="sfx", seconds=2.0, trim="tight",
+         prompt="Shrill coach's whistle, three sharp piercing blasts, gym class energy"),
+    # Jake: nursing school in Bismarck, North Dakota
+    dict(name="jake_nursing_heal", kind="tts", voice="adam", settings=DEADPAN, trim="tight",
+         text="Jake is in nursing school. And still. Will not. Heal."),
+    dict(name="jake_code_blue", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="CODE BLUE! CODE BLUE! Reece is flatlining and Nurse Jake... is buying an anvil."),
+    dict(name="jake_bismarck_cold", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="It's minus thirty in Bismarck, mate. Jake's hands are frozen. Every game. Even in July."),
+    dict(name="jake_clinical_6am", kind="tts", voice="lily", settings=ANGRY, trim="tight",
+         text="JAKE! You have a clinical at SIX A.M.! Why are you QUEUEING?!"),
+    # Reece: San Diego
+    dict(name="reece_sunny_inside", kind="tts", voice="george", settings=DEADPAN, trim="tight",
+         text="Seventy-two and sunny in San Diego. Reece is inside. Reece has been inside for six years."),
+    dict(name="reece_burrito", kind="tts", voice="adam", settings=ANGRY, trim="tight",
+         text="Reece is eating a California burrito MID-FIGHT. AGAIN. Reece. REECE. Put it DOWN."),
+    dict(name="reece_beach_eighth", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="Reece could be at the beach right now, mate. Instead he's eighth. Out of eight."),
+    # the whole squad
+    dict(name="four_friends_trailer", kind="tts", voice="adam", settings=DRAMATIC, trim="tight",
+         text="Four friends. Two time zones. Zero wins."),
+    dict(name="scouting_report", kind="tts", voice="george", settings=DEADPAN, trim="tight",
+         text="Coach Blanch's scouting report: Roy can't hit. Jake won't heal. Reece is at the beach."),
 ]
 
 # ---------------------------------------------------------------------------
