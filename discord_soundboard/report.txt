@@ -437,3 +437,11 @@ sad_airhorn:
     master: peak lift -1.0 dB (peak was 0.0 dB, cap +12)
     FINAL: 3.06s, 72 KB  [OK]
 
+==== run 2026-09-16 03:41:37 UTC | takes=2 | formats: tts=pcm_44100, sfx=mp3_44100_192 ====
+crickets:
+    take 1 [mp3_44100_192]: 4.49s  rms -27.5  peak -7.5  tail -22.2  -> score -27.5
+    take 2 [mp3_44100_192]: 4.49s  rms -40.1  peak -17.1  tail -35.7  -> score -40.2
+    PICK: take 1 (score -27.5)
+    master: peak lift +6.5 dB (peak was -7.5 dB, cap +12)
+    FINAL: 4.55s, 107 KB  [OK]
+
