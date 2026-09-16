@@ -2,8 +2,8 @@
 """
 Discord Soundboard Generator — lab edition
 ==========================================
-Generates 93 meme-grade soundboard clips with the ElevenLabs API:
-28 AI sound effects + 65 voice lines (Jake, Reece, and the whole lobby).
+Generates 109 meme-grade soundboard clips with the ElevenLabs API:
+28 AI sound effects + 81 voice lines (Jake, Reece, and the whole lobby).
 
 Every final clip fits Discord's soundboard hard caps:
   * max 5.2 seconds   (verified with ffprobe; auto-squeezed if a hair over)
@@ -228,8 +228,8 @@ SOUNDS = [
          text="This summer... Roy... finally buys a ward."),
     dict(name="roy_stole_my_kill", kind="tts", voice="lily", settings=ANGRY, trim="tight",
          text="ROY! That was MY kill! MINE! I HAD it!"),
-    dict(name="roy_ill_carry", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
-         text="Roy said he'd carry, mate. ...Roy is zero and eight."),
+    dict(name="jake_ill_carry", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="Jake said he'd carry, mate. ...Jake is zero and eight."),
     dict(name="blanch_ward", kind="tts", voice="adam", settings=ANGRY, trim="tight",
          text="BLANCH! Buy a ward! ONE ward! I am BEGGING you!"),
     dict(name="who_is_blanch", kind="tts", voice="george", settings=DEADPAN, trim="tight",
@@ -325,6 +325,40 @@ SOUNDS = [
          text="Four friends. Two time zones. Zero wins."),
     dict(name="scouting_report", kind="tts", voice="george", settings=DEADPAN, trim="tight",
          text="Coach Blanch's scouting report: Roy can't hit. Jake won't heal. Reece is at the beach."),
+
+    # ---------- ROUND 7: JAKE vs REECE, RAZZING EDITION ----------
+    dict(name="reece_trust_me", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="Reece said 'trust me.' ...Never trust Reece, mate. Never."),
+    dict(name="jake_did_not_heal", kind="tts", voice="adam", settings=DRAMATIC, trim="tight",
+         text="Jake said... I'll heal you. ...Jake did not heal you."),
+    dict(name="reece_not_on_it", kind="tts", voice="adam", settings=DRAMATIC, trim="tight",
+         text="Reece said... I'm on it. ...Reece was not on it. Reece was dead."),
+    dict(name="one_brain_cell", kind="tts", voice="george", settings=DEADPAN, trim="tight",
+         text="Jake and Reece share one brain cell. Today it's Reece's turn. He's not using it."),
+    dict(name="blame_both", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="Reece blames Jake. Jake blames Reece. I blame both of you, mate."),
+    dict(name="both_one_hp", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="Jake is ONE HP! Reece is ALSO one HP! ...They're hugging. They're both dead."),
+    dict(name="trust_the_process", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="Trust the process, Reece. ...The process is Jake. ...We're cooked, mate."),
+    dict(name="carried_by_jake", kind="tts", voice="george", settings=DEADPAN, trim="tight",
+         text="Reece got carried by Jake. Jake. Let that sink in."),
+    dict(name="nobody_playing", kind="tts", voice="adam", settings=DEADPAN, trim="tight",
+         text="Jake is thinking. Reece is also thinking. Nobody is playing."),
+    dict(name="reece_said_easy", kind="tts", voice="adam", settings=DRAMATIC, trim="tight",
+         text="Reece said... easy. ...It was not easy. It was eighth."),
+    dict(name="reece_pinged_shop", kind="tts", voice="lily", settings=ANGRY, trim="tight",
+         text="'I pinged,' says Reece. Reece pinged the SHOP, Jake! He pinged the SHOP!"),
+    dict(name="duo_is_dead", kind="tts", voice="callum", settings=DRAMATIC, trim="tight",
+         text="Jake and Reece! The DUO! The DYNAMIC— ...they're both dead. The duo is dead."),
+    dict(name="jake_locked_in", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="Jake's locked in, mate. Locked in. ...Jake's alt-tabbed. Jake's on YouTube."),
+    dict(name="jake_my_bad", kind="tts", voice="adam", settings=DEADPAN, trim="tight",
+         text="Jake said my bad. That's the sixth my bad. Jake. Stop being bad."),
+    dict(name="custody_kill", kind="tts", voice="george", settings=DEADPAN, trim="tight",
+         text="Jake and Reece have one kill between them. Shared. Like a custody arrangement."),
+    dict(name="cant_carry_conversation", kind="tts", voice="charlie", settings=CASUAL, trim="tight",
+         text="Carry me, Jake. ...Jake can't carry a conversation, mate."),
 ]
 
 # ---------------------------------------------------------------------------
