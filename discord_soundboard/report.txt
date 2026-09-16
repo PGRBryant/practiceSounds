@@ -1204,3 +1204,11 @@ crowd_cheer:
     master: peak -1.0 dB, no lift needed
     FINAL: 3.06s, 72 KB  [OK]
 
+==== run 2026-09-16 16:58:18 UTC | takes=2 | formats: tts=pcm_44100, sfx=mp3_44100_192 ====
+it_was_lag:
+    take 1 [pcm_44100]: 4.83s  rms -18.3  peak -0.2  tail -86.5  -> score -16.3
+    take 2 [pcm_44100]: 5.39s  rms -19.1  peak -1.0  tail -85.9  -> score -17.1
+    PICK: take 1 (score -16.3)
+    master: loudnorm 2-pass linear -> -14.0 LUFS (was -15.68 LUFS)
+    FINAL: 4.65s, 110 KB  [OK]
+
